@@ -1,0 +1,139 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/Bus_interconnects/AxiCrossbar_1x4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AxiCrossbar_1x4
+INFO: [VRFC 10-311] analyzing module Axi4WriteOnlyDecoder
+INFO: [VRFC 10-311] analyzing module Axi4ReadOnlyDecoder
+INFO: [VRFC 10-311] analyzing module Axi4WriteOnlyErrorSlave
+INFO: [VRFC 10-311] analyzing module Axi4ReadOnlyErrorSlave
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/Bus_interconnects/Axi_CDC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Axi_CDC
+INFO: [VRFC 10-311] analyzing module StreamFifoCC_4
+INFO: [VRFC 10-311] analyzing module StreamFifoCC_3
+INFO: [VRFC 10-311] analyzing module StreamFifoCC_2
+INFO: [VRFC 10-311] analyzing module StreamFifoCC_1
+INFO: [VRFC 10-311] analyzing module StreamFifoCC
+INFO: [VRFC 10-311] analyzing module BufferCC_1
+INFO: [VRFC 10-311] analyzing module BufferCC
+INFO: [VRFC 10-311] analyzing module BufferCC_6
+INFO: [VRFC 10-311] analyzing module BufferCC_5
+INFO: [VRFC 10-311] analyzing module BufferCC_4
+INFO: [VRFC 10-311] analyzing module BufferCC_8
+INFO: [VRFC 10-311] analyzing module BufferCC_7
+INFO: [VRFC 10-311] analyzing module BufferCC_11
+INFO: [VRFC 10-311] analyzing module BufferCC_10
+INFO: [VRFC 10-311] analyzing module BufferCC_9
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/addr_trans.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr_trans
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/apb_mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apb_mux2
+INFO: [VRFC 10-311] analyzing module arb_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/axi2apb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi2apb_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/Bus_interconnects/axi2sram_sp_ext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi2sram_sp_ext
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/axi_bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/axi_uart_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_uart_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/ram_wrap/axi_wrap_ram_sp_ext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_wrap_ram_sp_ext
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/btb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module btb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/ram_wrap/cache_sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_bank_sram
+INFO: [VRFC 10-311] analyzing module tagv_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/PLL_2019_2/clk_pll_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_pll
+INFO: [VRFC 10-311] analyzing module clk_pll_clk_pll_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/PLL_2019_2/clk_pll_stub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_pll
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'clk_pll' [E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/PLL_2019_2/clk_pll_stub.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/confreg/confreg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module confreg
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 's_wready' is not allowed [E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/confreg/confreg.v:122]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 's_rdata' is not allowed [E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/confreg/confreg.v:183]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 's_rvalid' is not allowed [E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/confreg/confreg.v:184]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 's_bvalid' is not allowed [E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/confreg/confreg.v:219]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/csr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module csr
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/dcache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dcache
+INFO: [VRFC 10-311] analyzing module lfsr
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/confreg/digitaltube_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module digitaltube_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/exe_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exe_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/icache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module icache
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/id_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_stage
+WARNING: [VRFC 10-3380] identifier 'inst_csr_rstat_en' is used before its declaration [E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/id_stage.v:316]
+WARNING: [VRFC 10-3380] identifier 'inst_st_en' is used before its declaration [E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/id_stage.v:317]
+WARNING: [VRFC 10-3380] identifier 'inst_ld_en' is used before its declaration [E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/id_stage.v:318]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/if_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_stage
+WARNING: [VRFC 10-3380] identifier 'btb_lock_en' is used before its declaration [E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/if_stage.v:163]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/confreg/lcd_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lcd_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/mem_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module YDecoder
+INFO: [VRFC 10-311] analyzing module BoothBase
+INFO: [VRFC 10-311] analyzing module BoothInterBase
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-311] analyzing module WallaceTreeBase
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/mycpu_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module core_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/perf_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perf_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/URT/raminfr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module raminfr
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/rst_sync/rst_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rst_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/soc_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module soc_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/sim/sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram_sp
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/tlb_entry.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tlb_entry
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/tools.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_2_4
+INFO: [VRFC 10-311] analyzing module encoder_4_2
+INFO: [VRFC 10-311] analyzing module decoder_4_16
+INFO: [VRFC 10-311] analyzing module encoder_16_4
+INFO: [VRFC 10-311] analyzing module decoder_5_32
+INFO: [VRFC 10-311] analyzing module encoder_32_5
+INFO: [VRFC 10-311] analyzing module decoder_6_64
+INFO: [VRFC 10-311] analyzing module one_valid_n
+INFO: [VRFC 10-311] analyzing module one_valid_16
+INFO: [VRFC 10-311] analyzing module one_valid_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/URT/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/URT/uart_regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/URT/uart_rfifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rfifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/URT/uart_sync_flops.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_sync_flops
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/URT/uart_tfifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tfifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/URT/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UART_TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/APB_UART/URT/uart_transmitter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_transmitter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/rtl/ip/open-la500/wb_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wb_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/sim/mycpu_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+WARNING: [VRFC 10-2096] empty statement in sequential block [E:/la32r_soc_ciciec/la32r_soc_ciciec/sim/mycpu_tb.v:163]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/la32r_soc_ciciec/la32r_soc_ciciec/fpga/project/Loongson_Soc.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'glbl' [E:/la32r_soc_ciciec/la32r_soc_ciciec/fpga/project/Loongson_Soc.sim/sim_1/behav/xsim/glbl.v:6]

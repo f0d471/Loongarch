@@ -1,0 +1,302 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon May 12 15:01:03 2025
+| Host         : KH29 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file soc_top_control_sets_placed.rpt
+| Design       : soc_top
+| Device       : xc7a200t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   224 |
+|    Minimum number of control sets                        |   224 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   540 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   224 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |    28 |
+| >= 6 to < 8        |     7 |
+| >= 8 to < 10       |    24 |
+| >= 10 to < 12      |     6 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     1 |
+| >= 16              |   153 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             236 |          136 |
+| No           | No                    | Yes                    |             183 |           57 |
+| No           | Yes                   | No                     |             329 |          140 |
+| Yes          | No                    | No                     |            4896 |         1783 |
+| Yes          | No                    | Yes                    |             120 |           47 |
+| Yes          | Yes                   | No                     |             984 |          352 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+------------------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+--------------+
+|           Clock Signal          |                                    Enable Signal                                   |                           Set/Reset Signal                           | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------+------------------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+--------------+
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    | pll_clk.u_rst_cpu/p_0_in__0                                          |                1 |              2 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    | pll_clk.u_rst_sys/delay[1]_i_1_n_0                                   |                1 |              2 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/receiver/fifo_rx/bottom[3]_i_1__0_n_0             | u_axi_uart_controller/uart0/regs/receiver/fifo_rx/fifo               |                2 |              4 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_Axi_CDC/wFifo/pushToPopGray_buffercc/E[0]                                        | u_Axi_CDC/awFifo/bufferCC_12/buffers_1_reg_0                         |                1 |              4 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    | u_axi_uart_controller/AA_axi2apb_bridge_cpu/apb_s_wstrb[3]_i_1_n_0   |                3 |              4 |         1.33 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_Axi_CDC/wFifo/popCC_readArbitation_fire                                          | u_Axi_CDC/awFifo/bufferCC_12/buffers_1_reg_0                         |                1 |              4 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/receiver/fifo_rx/top[3]_i_1__0_n_0                | u_axi_uart_controller/uart0/regs/receiver/fifo_rx/fifo               |                2 |              4 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/receiver/rcounter16[3]_i_1_n_0                    | pll_clk.u_rst_sys/prst                                               |                2 |              4 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    | u_axi_uart_controller/uart0/regs/msr[3]_i_1_n_0                      |                2 |              4 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/lcr_reg[7]_5[0]                        | pll_clk.u_rst_sys/prst                                               |                2 |              4 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/transmitter/fifo_tx/top[3]_i_2_n_0                | u_axi_uart_controller/uart0/regs/transmitter/fifo_tx/top[3]_i_1_n_0  |                1 |              4 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/transmitter/fifo_tx/bottom[3]_i_1_n_0             | u_axi_uart_controller/uart0/regs/transmitter/fifo_tx/top[3]_i_1_n_0  |                1 |              4 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_Axi_CDC/rFifo/popCC_addressGen_rValid_reg_0                                      | u_Axi_CDC/bFifo/bufferCC_12/buffers_1_reg_0                          |                1 |              4 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk |                                                                                    | pll_clk.u_rst_sys/prst                                               |                2 |              4 |         2.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/id_stage/ras_ptr_reg[3]_0[0]                                            | u_core_top/reset                                                     |                1 |              4 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/icache/main_state[4]_i_1_n_0                                            | u_core_top/reset                                                     |                3 |              4 |         1.33 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/reset_reg_6                                                    | u_core_top/wb_stage/reset_reg_11                                     |                1 |              4 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_Axi_CDC/rFifo/pushToPopGray_buffercc/E[0]                                        | u_Axi_CDC/bFifo/bufferCC_12/buffers_1_reg_0                          |                1 |              4 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/receiver/FSM_sequential_rstate[3]_i_1_n_0         | pll_clk.u_rst_sys/prst                                               |                2 |              4 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_AxiCrossbar_1x4/axiIn_readOnly_decoder/cpu_sync_arready                          | pll_clk.u_rst_sys/prst                                               |                2 |              5 |         2.50 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ws_valid_reg_5                                                 | u_core_top/reset                                                     |                2 |              5 |         2.50 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/transmitter/fifo_tx/count[4]_i_1__0_n_0           | u_axi_uart_controller/uart0/regs/transmitter/fifo_tx/top[3]_i_1_n_0  |                2 |              5 |         2.50 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/receiver/fifo_rx/count[4]_i_1__1_n_0              | u_axi_uart_controller/uart0/regs/receiver/fifo_rx/fifo               |                3 |              5 |         1.67 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/dcache/main_state                                                       | u_core_top/reset                                                     |                2 |              5 |         2.50 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/axi_bridge/io_push_fire_1                                               | pll_clk.u_rst_cpu/p_0_in__0                                          |                1 |              5 |         5.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_AxiCrossbar_1x4/axiIn_writeOnly_decoder/p_14_in                                  | pll_clk.u_rst_sys/prst                                               |                3 |              5 |         1.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_wrap_ram_sp_ext/u_axi_sram_sp/E[0]                                           | pll_clk.u_rst_sys/prst                                               |                1 |              5 |         5.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/receiver/rshift[4]_i_1_n_0                        | pll_clk.u_rst_sys/prst                                               |                1 |              5 |         5.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/transmitter/counter[4]_i_1_n_0                    | pll_clk.u_rst_sys/prst                                               |                3 |              5 |         1.67 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/axi_bridge/io_push_fire                                                 | pll_clk.u_rst_cpu/p_0_in__0                                          |                1 |              5 |         5.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    | u_axi_uart_controller/AA_axi2apb_bridge_cpu/lsr_mask_d_reg           |                4 |              6 |         1.50 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/reset_reg_3                                                    |                                                                      |                2 |              6 |         3.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_Axi_CDC/rFifo/popToPushGray_buffercc/sendRsp_reg                                 | u_Axi_CDC/rFifo/popToPushGray_buffercc/sendRsp_reg_0                 |                2 |              6 |         3.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/axi_s_rstrb                            | pll_clk.u_rst_sys/prst                                               |                2 |              7 |         3.50 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_Axi_CDC/rFifo/popToPushGray_buffercc/E[0]                                        | pll_clk.u_rst_sys/prst                                               |                1 |              7 |         7.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/E[0]                                   | pll_clk.u_rst_sys/prst                                               |                1 |              7 |         7.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_Axi_CDC/wFifo/popToPushGray_buffercc/io_push_fire                                | pll_clk.u_rst_cpu/p_0_in__0                                          |                2 |              7 |         3.50 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/lcr_reg[7]_4[0]                        | pll_clk.u_rst_sys/prst                                               |                2 |              8 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    | u_axi_uart_controller/uart0/regs/sclk_count[7]_i_1_n_0               |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/exe_stage/ds_to_es_bus_r0                                               | u_core_top/id_stage/es_valid_reg                                     |                2 |              8 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/axi_bridge/awaddr[31]_i_1_n_0                                           | u_core_top/axi_bridge/awaddr[3]_i_1_n_0                              |                2 |              8 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/reg_datai[7]_i_2_n_0                   | u_axi_uart_controller/AA_axi2apb_bridge_cpu/reg_datai[7]_i_1_n_0     |                8 |              8 |         1.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/reg_datao_32[15]                       | pll_clk.u_rst_sys/prst                                               |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/reg_datao_32[23]                       | pll_clk.u_rst_sys/prst                                               |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/reg_enable_reg_3[0]                    | pll_clk.u_rst_sys/prst                                               |                2 |              8 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/lcr_reg[7]_3[0]                        | pll_clk.u_rst_sys/prst                                               |                2 |              8 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/reg_datao_32[7]                        | pll_clk.u_rst_sys/prst                                               |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/lcr_reg[7]_2[0]                        | pll_clk.u_rst_sys/prst                                               |                4 |              8 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/reg_datao_32[31]                       | pll_clk.u_rst_sys/prst                                               |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/cpu_clk |                                                                                    | u_core_top/u_div/tmp_r                                               |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/lcr_reg[7]_1[0]                        | pll_clk.u_rst_sys/prst                                               |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_wrap_ram_sp_ext/u_axi_sram_sp/cnt_q[7]_i_1_n_0                               | pll_clk.u_rst_sys/prst                                               |                4 |              8 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/transmitter/tf_data_bak[7]_i_1_n_0                | pll_clk.u_rst_sys/prst                                               |                2 |              8 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/transmitter/E[0]                                  | pll_clk.u_rst_sys/prst                                               |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/block_cnt[7]_i_1_n_0                              | pll_clk.u_rst_sys/prst                                               |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/dl[23]_i_1_n_0                                    | pll_clk.u_rst_sys/prst                                               |                4 |              8 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | pll_clk.u_rst_sys/Q[0]                                                             |                                                                      |                2 |              8 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/exe_stage/ds_to_es_bus_r0                                               | u_core_top/id_stage/es_valid_reg_0                                   |                3 |              8 |         2.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/dlc1                                              | pll_clk.u_rst_sys/prst                                               |                3 |              9 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[170]_0                                      | u_core_top/reset                                                     |                3 |              9 |         3.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/transmitter/bit_counter[2]_i_1_n_0                | pll_clk.u_rst_sys/prst                                               |                3 |              9 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/reset_reg_5[0]                                                 |                                                                      |                5 |             10 |         2.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/receiver/fifo_rx/E[0]                             | pll_clk.u_rst_sys/prst                                               |                3 |             10 |         3.33 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/reset_reg_1[0]                                                 |                                                                      |                6 |             10 |         1.67 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/reset_reg_4[0]                                                 |                                                                      |                3 |             10 |         3.33 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/receiver/rf_data_in[10]_i_1_n_0                   | pll_clk.u_rst_sys/prst                                               |                2 |             11 |         5.50 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_confreg/u_lcd_driver/v_cnt_0                                                     | pll_clk.u_rst_sys/prst                                               |                4 |             11 |         2.75 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/lcr_reg[7]_6                           |                                                                      |                2 |             12 |         6.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[104]_1[0]                                   | u_core_top/reset                                                     |                3 |             12 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/uart0/regs/receiver/fifo_rx/rfifo/rf_push_pulse              |                                                                      |                2 |             12 |         6.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/icache/tagv_ram_way[1].u/main_state_reg[0][0]                           | u_core_top/reset                                                     |                5 |             15 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/dcache/way_d_reg_reg_r1_128_255_0_0_i_1_n_0                             |                                                                      |                4 |             16 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/dcache/way_d_reg_reg_r1_0_127_0_0_i_2_n_0                               |                                                                      |                4 |             16 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/reset_reg_2[0]                                                 |                                                                      |               14 |             19 |         1.36 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[104]_2[0]                                   |                                                                      |                5 |             20 |         4.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/axi_s_req_addr[19]_i_1_n_0             | pll_clk.u_rst_sys/prst                                               |               13 |             20 |         1.54 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_AxiCrossbar_1x4/toplevel_axiIn_writeOnly_decoder_io_outputs_3_aw_rValid_reg_0[0] | pll_clk.u_rst_sys/prst                                               |                8 |             20 |         2.50 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[105]_2[0]                                   |                                                                      |                8 |             20 |         2.50 |
+|  pll_clk.u_clk_pll/inst/cpu_clk |                                                                                    | pll_clk.u_rst_cpu/p_0_in__0                                          |                4 |             20 |         5.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_wrap_ram_sp_ext/u_axi_sram_sp/req_addr_q[22]_i_1_n_0                         | pll_clk.u_rst_sys/prst                                               |               13 |             21 |         1.62 |
+|  pll_clk.u_clk_pll/inst/cpu_clk |                                                                                    | u_Axi_CDC/bFifo/bufferCC_12/buffers_1_reg_0                          |                6 |             22 |         3.67 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/dcache/miss_buffer_replace_way                                          | u_core_top/reset                                                     |                7 |             22 |         3.14 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/icache/tagv_ram_way[1].u/E[0]                                           | u_core_top/reset                                                     |                8 |             23 |         2.88 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_wrap_ram_sp_ext/u_axi_sram_sp/ax_req_d_addr                                  | pll_clk.u_rst_sys/prst                                               |               11 |             25 |         2.27 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[104]_7[0]                                   |                                                                      |                8 |             26 |         3.25 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[104]_5[0]                                   |                                                                      |                8 |             26 |         3.25 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/reset_reg[0]                                                   |                                                                      |               11 |             27 |         2.45 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/reset_reg_0[0]                                                 |                                                                      |               11 |             27 |         2.45 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[250]_0[0]                                   | u_core_top/reset                                                     |                8 |             28 |         3.50 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/axi_bridge/awaddr[31]_i_1_n_0                                           |                                                                      |               10 |             29 |         2.90 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[6][29]_i_1_n_0                                               |                                                                      |                8 |             30 |         3.75 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[8][29]_i_1_n_0                                               |                                                                      |                8 |             30 |         3.75 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[9][29]_i_1_n_0                                               |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[30][29]_i_1_n_0                                              |                                                                      |                5 |             30 |         6.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc                                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[13][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[14][29]_i_1_n_0                                              |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[21][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[16][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[20][29]_i_1_n_0                                              |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[25][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[10][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[11][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[15][29]_i_1_n_0                                              |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[11][29]_i_1_n_0                                              |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[24][29]_i_1_n_0                                              |                                                                      |                5 |             30 |         6.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[18][29]_i_1_n_0                                              |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[27][29]_i_1_n_0                                              |                                                                      |                5 |             30 |         6.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[29][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[3][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[1][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[0][29]_i_1_n_0                                               |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[1][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[0][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[4][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc                                                              |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[8][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[7][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[2][29]_i_1_n_0                                               |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[2][29]_i_1_n_0                                               |                                                                      |                5 |             30 |         6.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[10][29]_i_1_n_0                                              |                                                                      |                8 |             30 |         3.75 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[19][29]_i_1_n_0                                              |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[3][29]_i_1_n_0                                               |                                                                      |                9 |             30 |         3.33 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[12][29]_i_1_n_0                                              |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[9][29]_i_1_n_0                                               |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[7][29]_i_1_n_0                                               |                                                                      |                5 |             30 |         6.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[6][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/id_stage/reset_reg_27[0]                                                |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[5][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[17][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[4][29]_i_1_n_0                                               |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[13][29]_i_1_n_0                                              |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/exe_stage/main_state_reg[0]_0[0]                                        |                                                                      |               14 |             30 |         2.14 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[26][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[5][29]_i_1_n_0                                               |                                                                      |                7 |             30 |         4.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/ras_pc[14][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/id_stage/E[0]                                                           |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[23][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/btb/btb_pc[22][29]_i_1_n_0                                              |                                                                      |                6 |             30 |         5.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/reset_reg_13                                                   |                                                                      |               12 |             31 |         2.58 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/u_div/UnsignS[31]_i_1_n_0                                               | u_core_top/reset                                                     |               11 |             31 |         2.82 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/axi_bridge/wdata[31]_i_1_n_0                                            |                                                                      |               11 |             32 |         2.91 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/u_div/p_1_in__0                                                         | u_core_top/u_div/tmp_r                                               |                9 |             32 |         3.56 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_confreg/write_digital_data                                                       | pll_clk.u_rst_sys/prst                                               |                8 |             32 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[104]_3[0]                                   |                                                                      |               13 |             32 |         2.46 |
+|  ram_rvalid_BUFG                |                                                                                    |                                                                      |               15 |             32 |         2.13 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_confreg/s_rdata[31]_i_1_n_0                                                      |                                                                      |               29 |             32 |         1.10 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[70]_6[0]                                    |                                                                      |               13 |             32 |         2.46 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[104]_6[0]                                   | u_core_top/reset                                                     |                8 |             32 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[105]_0[0]                                   |                                                                      |               15 |             32 |         2.13 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[106]_0[0]                                   | u_core_top/reset                                                     |               11 |             32 |         2.91 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[104]_0[0]                                   |                                                                      |               14 |             32 |         2.29 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[104]_4[0]                                   |                                                                      |               17 |             32 |         1.88 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_axi_uart_controller/AA_axi2apb_bridge_cpu/reg_datai_32                           | u_axi_uart_controller/AA_axi2apb_bridge_cpu/reg_datai_32[31]_i_1_n_0 |                7 |             32 |         4.57 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_confreg/write_timer_cmp                                                          | pll_clk.u_rst_sys/prst                                               |               12 |             32 |         2.67 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ws_valid_reg_4[0]                                              |                                                                      |               21 |             32 |         1.52 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_confreg/write_digital_ctrl                                                       | pll_clk.u_rst_sys/prst                                               |               10 |             32 |         3.20 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/if_stage/br_target_inst_req_buffer[31]_i_1_n_0                          |                                                                      |               16 |             32 |         2.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/if_stage/flush_inst_req_buffer                                          |                                                                      |               16 |             32 |         2.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/E[0]                                                           |                                                                      |               13 |             32 |         2.46 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/u_csr/csr_tval[31]_i_1_n_0                                              |                                                                      |               16 |             32 |         2.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/u_div/UnsignR                                                           | u_core_top/reset                                                     |               11 |             32 |         2.91 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/if_stage/fs_pc0                                                         | u_core_top/reset                                                     |               11 |             33 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_Axi_CDC/rFifo/pushToPopGray_buffercc/E[0]                                        |                                                                      |               12 |             34 |         2.83 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/axi_bridge/araddr[31]_i_1_n_0                                           |                                                                      |                8 |             35 |         4.38 |
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    | u_Axi_CDC/awFifo/bufferCC_12/buffers_1_reg_0                         |               12 |             35 |         2.92 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_13[0]                                  |                                                                      |               13 |             36 |         2.77 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_27[0]                                  |                                                                      |               13 |             36 |         2.77 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_28[0]                                  |                                                                      |               14 |             36 |         2.57 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_17[0]                                  |                                                                      |               15 |             36 |         2.40 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_10[0]                                  |                                                                      |               16 |             36 |         2.25 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_16[0]                                  |                                                                      |               19 |             36 |         1.89 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_24[0]                                  |                                                                      |                9 |             36 |         4.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_14[0]                                  |                                                                      |               18 |             36 |         2.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_1[0]                                   |                                                                      |               13 |             36 |         2.77 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_12[0]                                  |                                                                      |               19 |             36 |         1.89 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_5[0]                                   |                                                                      |               14 |             36 |         2.57 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_9[0]                                   |                                                                      |               16 |             36 |         2.25 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_31[0]                                  |                                                                      |               11 |             36 |         3.27 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_8[0]                                   |                                                                      |               18 |             36 |         2.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_6[0]                                   |                                                                      |               15 |             36 |         2.40 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_4[0]                                   |                                                                      |               12 |             36 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_29[0]                                  |                                                                      |               16 |             36 |         2.25 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_7[0]                                   |                                                                      |               12 |             36 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_3[0]                                   |                                                                      |               18 |             36 |         2.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_30[0]                                  |                                                                      |               11 |             36 |         3.27 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_23[0]                                  |                                                                      |               12 |             36 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_11[0]                                  |                                                                      |               19 |             36 |         1.89 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_15[0]                                  |                                                                      |               20 |             36 |         1.80 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_21[0]                                  |                                                                      |               18 |             36 |         2.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_18[0]                                  |                                                                      |               12 |             36 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_19[0]                                  |                                                                      |               16 |             36 |         2.25 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_2[0]                                   |                                                                      |               13 |             36 |         2.77 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/if_stage/btb_lock_buffer                                                |                                                                      |               19 |             36 |         1.89 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_20[0]                                  |                                                                      |               13 |             36 |         2.77 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_22[0]                                  |                                                                      |               13 |             36 |         2.77 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_Axi_CDC/awFifo/pushToPopGray_buffercc/E[0]                                       |                                                                      |               12 |             36 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_0[0]                                   |                                                                      |               17 |             36 |         2.12 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_25[0]                                  |                                                                      |               12 |             36 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[177]_26[0]                                  |                                                                      |               14 |             36 |         2.57 |
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    |                                                                      |               17 |             37 |         2.18 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_Axi_CDC/arFifo/pushToPopGray_buffercc/E[0]                                       |                                                                      |               10 |             39 |         3.90 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/id_stage/ras_ptr_reg[3]                                                 |                                                                      |                5 |             40 |         8.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/if_stage/fetch_en                                                       |                                                                      |               21 |             40 |         1.90 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_Axi_CDC/wFifo/pushToPopGray_buffercc/E[0]                                        |                                                                      |               11 |             45 |         4.09 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/dcache/tagv_ram_way[0].u/E[0]                                           | u_core_top/reset                                                     |               18 |             48 |         2.67 |
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    | u_axi_uart_controller/uart0/regs/receiver/fifo_rx/fifo               |               19 |             48 |         2.53 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_confreg/write_led                                                                | pll_clk.u_rst_sys/prst                                               |               16 |             48 |         3.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_Axi_CDC/wFifo/popToPushGray_buffercc/io_push_fire                                |                                                                      |                7 |             50 |         7.14 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/exe_stage/request_buffer_op                                             | u_core_top/reset                                                     |               22 |             55 |         2.50 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/axi_bridge/io_push_fire                                                 |                                                                      |                7 |             56 |         8.00 |
+|  pll_clk.u_clk_pll/inst/sys_clk | u_Axi_CDC/rFifo/popToPushGray_buffercc/E[0]                                        |                                                                      |                7 |             56 |         8.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/axi_bridge/io_push_fire_1                                               |                                                                      |                7 |             56 |         8.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/ms_to_ws_bus_r_reg[70]_1                                       |                                                                      |               11 |             88 |         8.00 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/axi_bridge/write_buffer_num[2]_i_1_n_0                                  | u_core_top/reset                                                     |               45 |             99 |         2.20 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/if_stage/fs_valid_reg_1[0]                                              |                                                                      |               48 |            106 |         2.21 |
+|  pll_clk.u_clk_pll/inst/cpu_clk |                                                                                    | u_core_top/reset                                                     |               61 |            159 |         2.61 |
+|  pll_clk.u_clk_pll/inst/cpu_clk |                                                                                    |                                                                      |              104 |            167 |         1.61 |
+|  pll_clk.u_clk_pll/inst/sys_clk |                                                                                    | pll_clk.u_rst_sys/prst                                               |               76 |            190 |         2.50 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/exe_stage/E[0]                                                          |                                                                      |               92 |            210 |         2.28 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/exe_stage/ds_to_es_bus_r0                                               |                                                                      |              116 |            216 |         1.86 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/mem_stage/ms_to_ws_valid                                                |                                                                      |               97 |            232 |         2.39 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/wb_stage/we                                                             |                                                                      |               32 |            236 |         7.38 |
+|  pll_clk.u_clk_pll/inst/cpu_clk | u_core_top/u_mul/E[0]                                                              |                                                                      |              262 |            712 |         2.72 |
++---------------------------------+------------------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+--------------+
+
+

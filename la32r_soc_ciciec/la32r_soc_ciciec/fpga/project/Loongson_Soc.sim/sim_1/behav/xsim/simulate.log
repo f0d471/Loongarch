@@ -1,0 +1,14 @@
+Time resolution is 1 ps
+Hello Loongarch32r!
+
+a = 100
+
+b = 3.256400
+
+c = 5478.475630
+
+String = ABCDE,  Address = 0x1c081000
+
+this is src
+
+INFO: xsimkernel Simulation Memory Usage: 51448 KB (Peak: 51448 KB), Simulation CPU Usage: 340077 ms

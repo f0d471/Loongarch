@@ -1,0 +1,789 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon May 12 15:02:45 2025
+| Host         : KH29 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file soc_top_methodology_drc_routed.rpt -pb soc_top_methodology_drc_routed.pb -rpx soc_top_methodology_drc_routed.rpx
+| Design       : soc_top
+| Device       : xc7a200tfbg676-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 144
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+| Rule      | Severity | Description                                                                                           | Checks |
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+| SYNTH-5   | Warning  | Mapped onto distributed RAM because of timing constraints                                             | 8      |
+| SYNTH-6   | Warning  | Timing of a RAM block might be sub-optimal                                                            | 20     |
+| TIMING-10 | Warning  | Missing property on synchronizer                                                                      | 1      |
+| TIMING-18 | Warning  | Missing input or output delay                                                                         | 77     |
+| TIMING-20 | Warning  | Non-clocked latch                                                                                     | 32     |
+| TIMING-47 | Warning  | False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks | 2      |
+| LATCH-1   | Advisory | Existing latches in the design                                                                        | 1      |
+| RTGT-1    | Advisory | RAM retargeting possibility                                                                           | 3      |
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-5#1 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_core_top/dcache/way_d_reg_reg_r1_0_127_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#2 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_core_top/dcache/way_d_reg_reg_r1_0_127_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#3 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_core_top/dcache/way_d_reg_reg_r1_128_255_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#4 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_core_top/dcache/way_d_reg_reg_r1_128_255_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#5 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_core_top/dcache/way_d_reg_reg_r2_0_127_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#6 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_core_top/dcache/way_d_reg_reg_r2_0_127_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#7 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_core_top/dcache/way_d_reg_reg_r2_128_255_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#8 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance u_core_top/dcache/way_d_reg_reg_r2_128_255_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/data_ram_way[0].data_ram_bank[0].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/data_ram_way[0].data_ram_bank[1].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/data_ram_way[0].data_ram_bank[2].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/data_ram_way[0].data_ram_bank[3].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#5 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/data_ram_way[1].data_ram_bank[0].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#6 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/data_ram_way[1].data_ram_bank[1].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#7 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/data_ram_way[1].data_ram_bank[2].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#8 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/data_ram_way[1].data_ram_bank[3].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#9 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/tagv_ram_way[0].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#10 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/dcache/tagv_ram_way[1].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#11 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/data_ram_way[0].data_ram_bank[0].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#12 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/data_ram_way[0].data_ram_bank[1].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#13 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/data_ram_way[0].data_ram_bank[2].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#14 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/data_ram_way[0].data_ram_bank[3].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#15 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/data_ram_way[1].data_ram_bank[0].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#16 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/data_ram_way[1].data_ram_bank[1].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#17 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/data_ram_way[1].data_ram_bank[2].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#18 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/data_ram_way[1].data_ram_bank[3].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#19 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/tagv_ram_way[0].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#20 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance u_core_top/icache/tagv_ram_way[1].u/mem_reg_reg, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on UART_RX relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on UART_TX relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[0] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[10] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[11] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[12] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[13] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[14] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[15] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[16] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[17] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[18] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[19] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[1] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[20] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[21] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[22] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[23] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[24] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[25] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[26] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[27] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[28] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[29] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[2] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[30] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[31] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[3] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[4] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[5] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[6] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[7] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#33 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[8] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#34 Warning
+Missing input or output delay  
+An input delay is missing on dip_sw[9] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#35 Warning
+Missing input or output delay  
+An output delay is missing on UART_RX relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#36 Warning
+Missing input or output delay  
+An output delay is missing on UART_TX relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#37 Warning
+Missing input or output delay  
+An output delay is missing on dpy0[0] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#38 Warning
+Missing input or output delay  
+An output delay is missing on dpy0[1] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#39 Warning
+Missing input or output delay  
+An output delay is missing on dpy0[2] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#40 Warning
+Missing input or output delay  
+An output delay is missing on dpy0[3] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#41 Warning
+Missing input or output delay  
+An output delay is missing on dpy0[4] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#42 Warning
+Missing input or output delay  
+An output delay is missing on dpy0[5] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#43 Warning
+Missing input or output delay  
+An output delay is missing on dpy0[6] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#44 Warning
+Missing input or output delay  
+An output delay is missing on dpy0[7] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#45 Warning
+Missing input or output delay  
+An output delay is missing on dpy1[0] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#46 Warning
+Missing input or output delay  
+An output delay is missing on dpy1[1] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#47 Warning
+Missing input or output delay  
+An output delay is missing on dpy1[2] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#48 Warning
+Missing input or output delay  
+An output delay is missing on dpy1[3] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#49 Warning
+Missing input or output delay  
+An output delay is missing on dpy1[4] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#50 Warning
+Missing input or output delay  
+An output delay is missing on dpy1[5] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#51 Warning
+Missing input or output delay  
+An output delay is missing on dpy1[6] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#52 Warning
+Missing input or output delay  
+An output delay is missing on dpy1[7] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#53 Warning
+Missing input or output delay  
+An output delay is missing on leds[0] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#54 Warning
+Missing input or output delay  
+An output delay is missing on leds[10] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#55 Warning
+Missing input or output delay  
+An output delay is missing on leds[11] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#56 Warning
+Missing input or output delay  
+An output delay is missing on leds[12] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#57 Warning
+Missing input or output delay  
+An output delay is missing on leds[13] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#58 Warning
+Missing input or output delay  
+An output delay is missing on leds[14] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#59 Warning
+Missing input or output delay  
+An output delay is missing on leds[15] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#60 Warning
+Missing input or output delay  
+An output delay is missing on leds[1] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#61 Warning
+Missing input or output delay  
+An output delay is missing on leds[2] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#62 Warning
+Missing input or output delay  
+An output delay is missing on leds[3] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#63 Warning
+Missing input or output delay  
+An output delay is missing on leds[4] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#64 Warning
+Missing input or output delay  
+An output delay is missing on leds[5] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#65 Warning
+Missing input or output delay  
+An output delay is missing on leds[6] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#66 Warning
+Missing input or output delay  
+An output delay is missing on leds[7] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#67 Warning
+Missing input or output delay  
+An output delay is missing on leds[8] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#68 Warning
+Missing input or output delay  
+An output delay is missing on leds[9] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#69 Warning
+Missing input or output delay  
+An output delay is missing on video_blue[0] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#70 Warning
+Missing input or output delay  
+An output delay is missing on video_blue[1] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#71 Warning
+Missing input or output delay  
+An output delay is missing on video_de relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#72 Warning
+Missing input or output delay  
+An output delay is missing on video_green[0] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#73 Warning
+Missing input or output delay  
+An output delay is missing on video_green[1] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#74 Warning
+Missing input or output delay  
+An output delay is missing on video_green[2] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#75 Warning
+Missing input or output delay  
+An output delay is missing on video_red[0] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#76 Warning
+Missing input or output delay  
+An output delay is missing on video_red[1] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#77 Warning
+Missing input or output delay  
+An output delay is missing on video_red[2] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[0] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[10] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[11] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[12] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[13] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[14] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[15] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[16] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[17] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[18] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[19] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[1] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[20] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[21] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[22] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[23] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[24] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[25] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[26] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[27] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[28] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[29] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[2] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[30] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[31] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[3] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[4] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[5] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[6] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[7] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[8] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[9] cannot be properly analyzed as its control pin u_axi_wrap_ram_sp_ext/u_axi_sram_sp/s_rdata_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-47#1 Warning
+False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks cpu_clk and sys_clk (see constraint position 4 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+Related violations: <none>
+
+TIMING-47#2 Warning
+False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks sys_clk and cpu_clk (see constraint position 4 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 32 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+RTGT-1#1 Advisory
+RAM retargeting possibility  
+Identified 12 RAM32X1D primitives that could be retargeted to RAM32M. Retargeting will save approximately 4 memory LUTs and improve routability. These can usually be achieved using synthesis inference or XPMs. The memories are u_core_top/addr_trans/tlb_entry/tlb_d0_reg_r2_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_d1_reg_r2_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_mat0_reg_r2_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_mat0_reg_r2_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_mat1_reg_r2_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_mat1_reg_r2_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_plv0_reg_r2_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_plv0_reg_r2_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_plv1_reg_r2_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_plv1_reg_r2_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_v0_reg_r2_0_31_0_0
+u_core_top/addr_trans/tlb_entry/tlb_v1_reg_r2_0_31_0_0
+Related violations: <none>
+
+RTGT-1#2 Advisory
+RAM retargeting possibility  
+Identified 12 RAM32X1D primitives that could be retargeted to RAM32M. Retargeting will save approximately 4 memory LUTs and improve routability. These can usually be achieved using synthesis inference or XPMs. The memories are u_core_top/addr_trans/tlb_entry/tlb_d0_reg_r3_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_d1_reg_r3_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_mat0_reg_r3_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_mat0_reg_r3_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_mat1_reg_r3_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_mat1_reg_r3_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_plv0_reg_r3_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_plv0_reg_r3_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_plv1_reg_r3_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_plv1_reg_r3_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_v0_reg_r3_0_31_0_0
+u_core_top/addr_trans/tlb_entry/tlb_v1_reg_r3_0_31_0_0
+Related violations: <none>
+
+RTGT-1#3 Advisory
+RAM retargeting possibility  
+Identified 6 RAM32X1D primitives that could be retargeted to RAM32M. Retargeting will save approximately 2 memory LUTs and improve routability. These can usually be achieved using synthesis inference or XPMs. The memories are u_core_top/addr_trans/tlb_entry/tlb_mat0_reg_r1_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_mat0_reg_r1_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_mat1_reg_r1_0_31_0_0,
+u_core_top/addr_trans/tlb_entry/tlb_mat1_reg_r1_0_31_1_1,
+u_core_top/addr_trans/tlb_entry/tlb_plv0_reg_r1_0_31_0_0
+u_core_top/addr_trans/tlb_entry/tlb_plv0_reg_r1_0_31_1_1
+Related violations: <none>
+
+
