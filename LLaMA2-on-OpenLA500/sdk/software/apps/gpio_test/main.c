@@ -13,6 +13,12 @@ unsigned long CORE_CLOCKS_PER_SEC = 33000000L;
 
 static void delay_loop(unsigned int n)
 {
+#ifdef SIMU
+    n = n / 100000u;
+    if (n == 0) {
+        n = 1;
+    }
+#endif
     volatile unsigned int i;
     for (i = 0; i < n; i++) {
         ;
@@ -48,6 +54,8 @@ int main(int argc, char **argv)
 
     (void)argc;
     (void)argv;
+
+    setbuf(stdout, NULL);
 
     printf("\\n=== GPIO polling test start ===\\n");
     printf("GPIO base = 0x%08x\\n", (unsigned int)gpio_get_base());
