@@ -19,43 +19,67 @@ static void delay_loop(unsigned int n)
     }
 }
 
+static void print_input_changes(U16 prev_inputs, U16 curr_inputs)
+{
+    U16 changed = (U16)(prev_inputs ^ curr_inputs);
+    int bit;
+
+    if (changed == 0) {
+        return;
+    }
+
+    printf("gpio_in changed: old=0x%04x, new=0x%04x\n", prev_inputs, curr_inputs);
+
+    for (bit = 0; bit < 16; bit++) {
+        U16 mask = (U16)(1u << bit);
+
+        if (changed & mask) {
+            printf("  gpio_in[%d] -> %d\n", bit, (curr_inputs & mask) ? 1 : 0);
+        }
+    }
+}
+
 int main(int argc, char **argv)
 {
+    const U16 dir_mask = 0xFF00;
+    const U16 out_mask = (U16)(~dir_mask);
     U16 pattern = 0x0001;
-    int i;
+    U16 prev_inputs;
 
-    printf("\\n=== GPIO driver test start ===\\n");
+    (void)argc;
+    (void)argv;
+
+    printf("\\n=== GPIO polling test start ===\\n");
     printf("GPIO base = 0x%08x\\n", (unsigned int)gpio_get_base());
 
     /* high 8 bits input, low 8 bits output */
-    gpio_set_dir(0xFF00);
+    gpio_set_dir(dir_mask);
     printf("GPDIR = 0x%04x (1=input, 0=output)\\n", gpio_get_dir());
 
-    gpio_irq_clear();
-    gpio_irq_enable(1);
+    gpio_write_data(0x0000);
+    prev_inputs = (U16)(gpio_read_data() & dir_mask);
+    printf("initial gpio_in = 0x%04x\\n", prev_inputs);
 
-    for (i = 0; i < 16; i++) {
-        gpio_write_data(pattern);
-        printf("write GPDAT=0x%04x, readback=0x%04x, irq=%d\\n",
-               pattern,
-               gpio_read_data(),
-               gpio_irq_is_pending());
+    for (;;) {
+        U16 write_value = (U16)(pattern & out_mask);
+        U16 readback;
+        U16 curr_inputs;
 
-        if (gpio_irq_is_pending()) {
-            gpio_irq_clear();
-            printf("irq cleared\\n");
-        }
+        gpio_write_data(write_value);
+        readback = gpio_read_data();
+        curr_inputs = (U16)(readback & dir_mask);
+
+        printf("write GPDAT=0x%04x, readback GPDAT=0x%04x\\n", write_value, readback);
+        print_input_changes(prev_inputs, curr_inputs);
+        prev_inputs = curr_inputs;
 
         pattern <<= 1;
-        if (pattern == 0) {
+        if (pattern > 0x0080) {
             pattern = 1;
         }
 
         delay_loop(5000000);
     }
-
-    gpio_irq_enable(0);
-    printf("=== GPIO driver test done ===\\n");
 
     return 0;
 }

@@ -188,3 +188,7 @@ handle_hwi7:
 HWI0_IntrHandler:
 1:
   b 1b
+
+.weak HWI1_IntrHandler
+HWI1_IntrHandler:
+  jirl zero, ra, 0
