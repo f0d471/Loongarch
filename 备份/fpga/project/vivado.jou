@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Mar 11 23:16:11 2026
+# Process ID         : 43504
+# Current directory  : E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent34828 E:\github\Loongarch\LLaMA2-on-OpenLA500\fpga\project\Loongson_Soc.xpr
+# Log file           : E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/vivado.log
+# Journal file       : E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project\vivado.jou
+# Running On         : DESKTOP-HDDM8O8
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13650HX
+# CPU Frequency      : 2803 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16849 MB
+# Swap memory        : 32531 MB
+# Total Virtual      : 49380 MB
+# Available Virtual  : 11656 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_top.tcl
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+close_sim

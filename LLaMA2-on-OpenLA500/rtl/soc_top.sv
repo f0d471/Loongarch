@@ -83,7 +83,11 @@ module soc_top #(parameter SIMULATION=1'b0)
 
     //------uart-------
     inout           UART_RX,            //串口RX接收
-    inout           UART_TX             //串口TX发送
+    inout           UART_TX,            //串口TX发送
+
+    //------gpio (Flash连接器引脚)-------
+    input  [15:0]   gpio_in,            //GPIO输入 (flash_d[15:0])
+    output [15:0]   gpio_out            //GPIO输出 (flash_a[15:0])
 );
 
 
@@ -109,6 +113,11 @@ PX3W PAD_CLK_IN (.XIN(clk), .XOUT(clk_o), .XC(clk_i));
 `OPAD_GEN_SIMPLE(ext_ram_we_n)
 `IOPAD_GEN_SIMPLE(UART_RX)
 `IOPAD_GEN_SIMPLE(UART_TX)
+`IPAD_GEN_VEC_SIMPLE(gpio_in)
+`OPAD_GEN_VEC_SIMPLE(gpio_out)
+
+wire [15:0] gpio_out_full;
+assign gpio_out_o = gpio_out_full;
 
 wire cpu_clk;
 wire cpu_resetn;
@@ -773,47 +782,47 @@ axi_wrap_ram_sp_ext u_axi_ram (
 
 
 
-// Wire declarations for AXI Slave 1 (UART)
-wire         uart_awvalid;
-wire         uart_awready;
-wire  [31:0] uart_awaddr;
-wire  [4:0]  uart_awid;
-wire  [7:0]  uart_awlen;
-wire  [2:0]  uart_awsize;
-wire  [1:0]  uart_awburst;
-wire  [0:0]  uart_awlock;
-wire  [3:0]  uart_awcache;
-wire  [2:0]  uart_awprot;
+// Wire declarations for AXI Slave 1 (APB Peripherals: UART + GPIO)
+wire         apb_periph_awvalid;
+wire         apb_periph_awready;
+wire  [31:0] apb_periph_awaddr;
+wire  [4:0]  apb_periph_awid;
+wire  [7:0]  apb_periph_awlen;
+wire  [2:0]  apb_periph_awsize;
+wire  [1:0]  apb_periph_awburst;
+wire  [0:0]  apb_periph_awlock;
+wire  [3:0]  apb_periph_awcache;
+wire  [2:0]  apb_periph_awprot;
 
-wire   [4:0] uart_wid;
-wire         uart_wvalid;
-wire         uart_wready;
-wire  [31:0] uart_wdata;
-wire  [3:0]  uart_wstrb;
-wire         uart_wlast;
+wire   [4:0] apb_periph_wid;
+wire         apb_periph_wvalid;
+wire         apb_periph_wready;
+wire  [31:0] apb_periph_wdata;
+wire  [3:0]  apb_periph_wstrb;
+wire         apb_periph_wlast;
 
-wire         uart_bvalid;
-wire         uart_bready;
-wire  [4:0]  uart_bid;
-wire  [1:0]  uart_bresp;
+wire         apb_periph_bvalid;
+wire         apb_periph_bready;
+wire  [4:0]  apb_periph_bid;
+wire  [1:0]  apb_periph_bresp;
 
-wire         uart_arvalid;
-wire         uart_arready;
-wire  [31:0] uart_araddr;
-wire  [4:0]  uart_arid;
-wire  [7:0]  uart_arlen;
-wire  [2:0]  uart_arsize;
-wire  [1:0]  uart_arburst;
-wire  [0:0]  uart_arlock;
-wire  [3:0]  uart_arcache;
-wire  [2:0]  uart_arprot;
+wire         apb_periph_arvalid;
+wire         apb_periph_arready;
+wire  [31:0] apb_periph_araddr;
+wire  [4:0]  apb_periph_arid;
+wire  [7:0]  apb_periph_arlen;
+wire  [2:0]  apb_periph_arsize;
+wire  [1:0]  apb_periph_arburst;
+wire  [0:0]  apb_periph_arlock;
+wire  [3:0]  apb_periph_arcache;
+wire  [2:0]  apb_periph_arprot;
 
-wire         uart_rvalid;
-wire         uart_rready;
-wire  [31:0] uart_rdata;
-wire  [4:0]  uart_rid;
-wire  [1:0]  uart_rresp;
-wire         uart_rlast;
+wire         apb_periph_rvalid;
+wire         apb_periph_rready;
+wire  [31:0] apb_periph_rdata;
+wire  [4:0]  apb_periph_rid;
+wire  [1:0]  apb_periph_rresp;
+wire         apb_periph_rlast;
 
 
 // uart
@@ -858,61 +867,61 @@ assign uart0_ri_i  = UART_RI;
 
 fifo #(
     .D_WIDTH(5))
-u_fifo_wid(
+u_fifo_apb_periph_wid(
     .clk(sys_clk),
     .rst_n(sys_resetn),
-    .push(uart_awvalid & uart_awready),
-    .pop(uart_bvalid & uart_bready),
-    .din(uart_awid),
-    .dout(uart_wid),
+    .push(apb_periph_awvalid & apb_periph_awready),
+    .pop(apb_periph_bvalid & apb_periph_bready),
+    .din(apb_periph_awid),
+    .dout(apb_periph_wid),
     .fifo_empty(),
     .fifo_full()
 );
 
 
-// UART_CONTROLLER
-axi_uart_controller u_axi_uart_controller
+// APB_CONTROLLER (UART + GPIO)
+axi_apb_controller u_axi_apb_controller
 (
     .clk                (sys_clk            ),
     .rst_n              (sys_resetn         ),
 
     //axi bus
-    .axi_s_awid         (uart_awid          ),
-    .axi_s_awaddr       (uart_awaddr        ),
-    .axi_s_awlen        (uart_awlen         ),
-    .axi_s_awsize       (uart_awsize        ),
-    .axi_s_awburst      (uart_awburst       ),
-    .axi_s_awlock       (uart_awlock        ),
-    .axi_s_awcache      (uart_awcache       ),
-    .axi_s_awprot       (uart_awprot        ),
-    .axi_s_awvalid      (uart_awvalid       ),
-    .axi_s_awready      (uart_awready       ),
-    .axi_s_wid          (uart_wid           ),
-    .axi_s_wdata        (uart_wdata         ),
-    .axi_s_wstrb        (uart_wstrb         ),
-    .axi_s_wlast        (uart_wlast         ),
-    .axi_s_wvalid       (uart_wvalid        ),
-    .axi_s_wready       (uart_wready        ),
-    .axi_s_bid          (uart_bid           ),
-    .axi_s_bresp        (uart_bresp         ),
-    .axi_s_bvalid       (uart_bvalid        ),
-    .axi_s_bready       (uart_bready        ),
-    .axi_s_arid         (uart_arid          ),
-    .axi_s_araddr       (uart_araddr        ),
-    .axi_s_arlen        (uart_arlen         ),
-    .axi_s_arsize       (uart_arsize        ),
-    .axi_s_arburst      (uart_arburst       ),
-    .axi_s_arlock       (uart_arlock        ),
-    .axi_s_arcache      (uart_arcache       ),
-    .axi_s_arprot       (uart_arprot        ),
-    .axi_s_arvalid      (uart_arvalid       ),
-    .axi_s_arready      (uart_arready       ),
-    .axi_s_rid          (uart_rid           ),
-    .axi_s_rdata        (uart_rdata         ),
-    .axi_s_rresp        (uart_rresp         ),
-    .axi_s_rlast        (uart_rlast         ),
-    .axi_s_rvalid       (uart_rvalid        ),
-    .axi_s_rready       (uart_rready        ),
+    .axi_s_awid         (apb_periph_awid    ),
+    .axi_s_awaddr       (apb_periph_awaddr  ),
+    .axi_s_awlen        (apb_periph_awlen   ),
+    .axi_s_awsize       (apb_periph_awsize  ),
+    .axi_s_awburst      (apb_periph_awburst ),
+    .axi_s_awlock       (apb_periph_awlock  ),
+    .axi_s_awcache      (apb_periph_awcache ),
+    .axi_s_awprot       (apb_periph_awprot  ),
+    .axi_s_awvalid      (apb_periph_awvalid ),
+    .axi_s_awready      (apb_periph_awready ),
+    .axi_s_wid          (apb_periph_wid     ),
+    .axi_s_wdata        (apb_periph_wdata   ),
+    .axi_s_wstrb        (apb_periph_wstrb   ),
+    .axi_s_wlast        (apb_periph_wlast   ),
+    .axi_s_wvalid       (apb_periph_wvalid  ),
+    .axi_s_wready       (apb_periph_wready  ),
+    .axi_s_bid          (apb_periph_bid     ),
+    .axi_s_bresp        (apb_periph_bresp   ),
+    .axi_s_bvalid       (apb_periph_bvalid  ),
+    .axi_s_bready       (apb_periph_bready  ),
+    .axi_s_arid         (apb_periph_arid    ),
+    .axi_s_araddr       (apb_periph_araddr  ),
+    .axi_s_arlen        (apb_periph_arlen   ),
+    .axi_s_arsize       (apb_periph_arsize  ),
+    .axi_s_arburst      (apb_periph_arburst ),
+    .axi_s_arlock       (apb_periph_arlock  ),
+    .axi_s_arcache      (apb_periph_arcache ),
+    .axi_s_arprot       (apb_periph_arprot  ),
+    .axi_s_arvalid      (apb_periph_arvalid ),
+    .axi_s_arready      (apb_periph_arready ),
+    .axi_s_rid          (apb_periph_rid     ),
+    .axi_s_rdata        (apb_periph_rdata   ),
+    .axi_s_rresp        (apb_periph_rresp   ),
+    .axi_s_rlast        (apb_periph_rlast   ),
+    .axi_s_rvalid       (apb_periph_rvalid  ),
+    .axi_s_rready       (apb_periph_rready  ),
 
     //dma
     .apb_rw_dma         (1'b0               ),
@@ -941,7 +950,12 @@ axi_uart_controller u_axi_uart_controller
     .uart0_dsr_i        (uart0_dsr_i        ),
     .uart0_dcd_i        (uart0_dcd_i        ),
     .uart0_ri_i         (uart0_ri_i         ),
-    .uart0_int          (uart0_int          )
+    .uart0_int          (uart0_int          ),
+
+    // GPIO (16-bit)
+    .gpio_in            (gpio_in_i          ),
+    .gpio_out           (gpio_out_full      ),
+    .gpio_int           (                   )
 );
 
 
@@ -1194,50 +1208,50 @@ AxiCrossbar_2x4 u_axi_crossbar (
     .axiOut_0_r_payload_resp    (ram_rresp),
     .axiOut_0_r_payload_last    (ram_rlast),
 
-    // AXI Slave 1 (Output) - Write Address Channel (UART)
-    .axiOut_1_aw_valid          (uart_awvalid),
-    .axiOut_1_aw_ready          (uart_awready),
-    .axiOut_1_aw_payload_addr   (uart_awaddr),
-    .axiOut_1_aw_payload_id     (uart_awid),
-    .axiOut_1_aw_payload_len    (uart_awlen),
-    .axiOut_1_aw_payload_size   (uart_awsize),
-    .axiOut_1_aw_payload_burst  (uart_awburst),
-    .axiOut_1_aw_payload_lock   (uart_awlock),
-    .axiOut_1_aw_payload_cache  (uart_awcache),
-    .axiOut_1_aw_payload_prot   (uart_awprot),
+    // AXI Slave 1 (Output) - Write Address Channel (APB Peripherals: UART + GPIO)
+    .axiOut_1_aw_valid          (apb_periph_awvalid),
+    .axiOut_1_aw_ready          (apb_periph_awready),
+    .axiOut_1_aw_payload_addr   (apb_periph_awaddr),
+    .axiOut_1_aw_payload_id     (apb_periph_awid),
+    .axiOut_1_aw_payload_len    (apb_periph_awlen),
+    .axiOut_1_aw_payload_size   (apb_periph_awsize),
+    .axiOut_1_aw_payload_burst  (apb_periph_awburst),
+    .axiOut_1_aw_payload_lock   (apb_periph_awlock),
+    .axiOut_1_aw_payload_cache  (apb_periph_awcache),
+    .axiOut_1_aw_payload_prot   (apb_periph_awprot),
 
-    // AXI Slave 1 (Output) - Write Data Channel (UART)
-    .axiOut_1_w_valid           (uart_wvalid),
-    .axiOut_1_w_ready           (uart_wready),
-    .axiOut_1_w_payload_data    (uart_wdata),
-    .axiOut_1_w_payload_strb    (uart_wstrb),
-    .axiOut_1_w_payload_last    (uart_wlast),
+    // AXI Slave 1 (Output) - Write Data Channel (APB Peripherals: UART + GPIO)
+    .axiOut_1_w_valid           (apb_periph_wvalid),
+    .axiOut_1_w_ready           (apb_periph_wready),
+    .axiOut_1_w_payload_data    (apb_periph_wdata),
+    .axiOut_1_w_payload_strb    (apb_periph_wstrb),
+    .axiOut_1_w_payload_last    (apb_periph_wlast),
 
-    // AXI Slave 1 (Output) - Write Response Channel (UART)
-    .axiOut_1_b_valid           (uart_bvalid),
-    .axiOut_1_b_ready           (uart_bready),
-    .axiOut_1_b_payload_id      (uart_bid),
-    .axiOut_1_b_payload_resp    (uart_bresp),
+    // AXI Slave 1 (Output) - Write Response Channel (APB Peripherals: UART + GPIO)
+    .axiOut_1_b_valid           (apb_periph_bvalid),
+    .axiOut_1_b_ready           (apb_periph_bready),
+    .axiOut_1_b_payload_id      (apb_periph_bid),
+    .axiOut_1_b_payload_resp    (apb_periph_bresp),
 
-    // AXI Slave 1 (Output) - Read Address Channel (UART)
-    .axiOut_1_ar_valid          (uart_arvalid),
-    .axiOut_1_ar_ready          (uart_arready),
-    .axiOut_1_ar_payload_addr   (uart_araddr),
-    .axiOut_1_ar_payload_id     (uart_arid),
-    .axiOut_1_ar_payload_len    (uart_arlen),
-    .axiOut_1_ar_payload_size   (uart_arsize),
-    .axiOut_1_ar_payload_burst  (uart_arburst),
-    .axiOut_1_ar_payload_lock   (uart_arlock),
-    .axiOut_1_ar_payload_cache  (uart_arcache),
-    .axiOut_1_ar_payload_prot   (uart_arprot),
+    // AXI Slave 1 (Output) - Read Address Channel (APB Peripherals: UART + GPIO)
+    .axiOut_1_ar_valid          (apb_periph_arvalid),
+    .axiOut_1_ar_ready          (apb_periph_arready),
+    .axiOut_1_ar_payload_addr   (apb_periph_araddr),
+    .axiOut_1_ar_payload_id     (apb_periph_arid),
+    .axiOut_1_ar_payload_len    (apb_periph_arlen),
+    .axiOut_1_ar_payload_size   (apb_periph_arsize),
+    .axiOut_1_ar_payload_burst  (apb_periph_arburst),
+    .axiOut_1_ar_payload_lock   (apb_periph_arlock),
+    .axiOut_1_ar_payload_cache  (apb_periph_arcache),
+    .axiOut_1_ar_payload_prot   (apb_periph_arprot),
 
-    // AXI Slave 1 (Output) - Read Data Channel (UART)
-    .axiOut_1_r_valid           (uart_rvalid),
-    .axiOut_1_r_ready           (uart_rready),
-    .axiOut_1_r_payload_data    (uart_rdata),
-    .axiOut_1_r_payload_id      (uart_rid),
-    .axiOut_1_r_payload_resp    (uart_rresp),
-    .axiOut_1_r_payload_last    (uart_rlast),
+    // AXI Slave 1 (Output) - Read Data Channel (APB Peripherals: UART + GPIO)
+    .axiOut_1_r_valid           (apb_periph_rvalid),
+    .axiOut_1_r_ready           (apb_periph_rready),
+    .axiOut_1_r_payload_data    (apb_periph_rdata),
+    .axiOut_1_r_payload_id      (apb_periph_rid),
+    .axiOut_1_r_payload_resp    (apb_periph_rresp),
+    .axiOut_1_r_payload_last    (apb_periph_rlast),
 
     // AXI Slave 2 (Output) - Write Address Channel
     .axiOut_2_aw_valid          (axiOut_2_awvalid),

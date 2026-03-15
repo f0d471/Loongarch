@@ -33,11 +33,11 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `timescale 1ns / 1ps
 `include "config.h"
 
-`define UART_PSEL               u_soc_top.u_axi_uart_controller.uart0.PSEL
-`define UART_PENBLE             u_soc_top.u_axi_uart_controller.uart0.PENABLE
-`define UART_PWRITE             u_soc_top.u_axi_uart_controller.uart0.PWRITE
-`define UART_WADDR              u_soc_top.u_axi_uart_controller.uart0.PADDR[7:0]
-`define UART_WDATA              u_soc_top.u_axi_uart_controller.uart0.PWDATA[7:0]
+`define UART_PSEL               u_soc_top.u_axi_apb_controller.uart0.PSEL
+`define UART_PENBLE             u_soc_top.u_axi_apb_controller.uart0.PENABLE
+`define UART_PWRITE             u_soc_top.u_axi_apb_controller.uart0.PWRITE
+`define UART_WADDR              u_soc_top.u_axi_apb_controller.uart0.PADDR[7:0]
+`define UART_WDATA              u_soc_top.u_axi_apb_controller.uart0.PWDATA[7:0]
 
 module tb_top( );
 reg reset;
@@ -70,6 +70,8 @@ wire  ext_ram_oe_n;
 wire  ext_ram_we_n;
 wire  [31:0]  base_ram_data;
 wire  [31:0]  ext_ram_data;
+reg   [15:0]  gpio_in;
+wire  [15:0]  gpio_out;
 
 
 initial
@@ -77,6 +79,7 @@ begin
     clk = 1'b0;
     reset = 1'b1;
     dip_sw = 32'h0;
+    gpio_in = 16'h0;
     #2000;
     reset = 1'b0;
 end
@@ -144,7 +147,10 @@ soc_top #(.SIMULATION(1'b1))  u_soc_top (
     .ext_ram_data            ( ext_ram_data    ),
 
     .UART_RX                 ( UART_RX       ),
-    .UART_TX                 ( UART_TX       )
+    .UART_TX                 ( UART_TX       ),
+
+    .gpio_in                 ( gpio_in       ),
+    .gpio_out                ( gpio_out      )
 );
 
 

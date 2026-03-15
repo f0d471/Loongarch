@@ -1,0 +1,126 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/app/XILINX/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 6 for port 'cmd_block_count' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:458]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/soc_top.sv" Line 37. Module soc_top(SIMULATION=1'b1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB/GPIO/GPCORE.sv" Line 27. Module GPCORE doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-3980] File "E:/github/Loongarch/LLaMA2-on-OpenLA500/sim/sram.v" Line 48 : The SystemVerilog feature ": Sensitivity on Associative Array" is not supported yet for simulation.
+WARNING: [XSIM 43-3980] File "E:/github/Loongarch/LLaMA2-on-OpenLA500/sim/sram.v" Line 48 : The SystemVerilog feature ": Sensitivity on Associative Array" is not supported yet for simulation.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PX3W
+Compiling module xil_defaultlib.PIUW
+Compiling module xil_defaultlib.PIW
+Compiling module xil_defaultlib.PO8W
+Compiling module xil_defaultlib.PB8W
+Compiling module xil_defaultlib.rst_sync
+Compiling module xil_defaultlib.if_stage
+Compiling module xil_defaultlib.decoder_6_64
+Compiling module xil_defaultlib.decoder_4_16
+Compiling module xil_defaultlib.decoder_2_4
+Compiling module xil_defaultlib.decoder_5_32
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_stage
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.exe_stage
+Compiling module xil_defaultlib.div
+Compiling module xil_defaultlib.YDecoder
+Compiling module xil_defaultlib.BoothBase
+Compiling module xil_defaultlib.BoothInterBase_default
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.WallaceTreeBase
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.mem_stage
+Compiling module xil_defaultlib.wb_stage
+Compiling module xil_defaultlib.csr
+Compiling module xil_defaultlib.axi_bridge
+Compiling module xil_defaultlib.encoder_4_2
+Compiling module xil_defaultlib.encoder_16_4
+Compiling module xil_defaultlib.encoder_32_5
+Compiling module xil_defaultlib.tlb_entry_default
+Compiling module xil_defaultlib.addr_trans
+Compiling module xil_defaultlib.one_valid_n(n=4)
+Compiling module xil_defaultlib.data_bank_sram_default
+Compiling module xil_defaultlib.tagv_sram_default
+Compiling module xil_defaultlib.lfsr
+Compiling module xil_defaultlib.icache_default
+Compiling module xil_defaultlib.dcache_default
+Compiling module xil_defaultlib.one_valid_32
+Compiling module xil_defaultlib.one_valid_16
+Compiling module xil_defaultlib.btb_default
+Compiling module xil_defaultlib.perf_counter
+Compiling module xil_defaultlib.core_top
+Compiling module xil_defaultlib.BufferCC_9
+Compiling module xil_defaultlib.BufferCC_10
+Compiling module xil_defaultlib.BufferCC_11
+Compiling module xil_defaultlib.StreamFifoCC
+Compiling module xil_defaultlib.BufferCC_7
+Compiling module xil_defaultlib.BufferCC_8
+Compiling module xil_defaultlib.StreamFifoCC_1
+Compiling module xil_defaultlib.BufferCC_4
+Compiling module xil_defaultlib.BufferCC_5
+Compiling module xil_defaultlib.BufferCC_6
+Compiling module xil_defaultlib.StreamFifoCC_2
+Compiling module xil_defaultlib.StreamFifoCC_3
+Compiling module xil_defaultlib.BufferCC
+Compiling module xil_defaultlib.BufferCC_1
+Compiling module xil_defaultlib.StreamFifoCC_4
+Compiling module xil_defaultlib.Axi_CDC
+Compiling module xil_defaultlib.CB_Controller
+Compiling module xil_defaultlib.sram(DATA_WIDTH=32)
+Compiling module xil_defaultlib.sram(DATA_WIDTH=32,INIT_FILE="D:...
+Compiling module xil_defaultlib.sram(DATA_WIDTH=1024,ADDR_WIDTH=...
+Compiling module xil_defaultlib.multiplication_normaliser
+Compiling module xil_defaultlib.gMultiplier
+Compiling module xil_defaultlib.fpmul_seq_pipeline
+Compiling module xil_defaultlib.addition_normaliser
+Compiling module xil_defaultlib.generalAdder
+Compiling module xil_defaultlib.fpadd_seq
+Compiling module xil_defaultlib.fp_mac_pipelined_acc
+Compiling module xil_defaultlib.PE_core(MAC_LATENCY=4)
+Compiling module xil_defaultlib.write_out
+Compiling module xil_defaultlib.mac_top_default
+Compiling module xil_defaultlib.axi_dma_controller_default
+Compiling module xil_defaultlib.CB_top
+Compiling module xil_defaultlib.axi2sram_sp_ext_default
+Compiling module xil_defaultlib.axi_wrap_ram_sp_ext
+Compiling module xil_defaultlib.fifo(D_WIDTH=5)
+Compiling module xil_defaultlib.axi2apb_bridge
+Compiling module xil_defaultlib.arb_2_1
+Compiling module xil_defaultlib.apb_mux2
+Compiling module xil_defaultlib.raminfr
+Compiling module xil_defaultlib.uart_tfifo
+Compiling module xil_defaultlib.uart_transmitter
+Compiling module xil_defaultlib.uart_sync_flops(width=1,init_val...
+Compiling module xil_defaultlib.uart_rfifo(fifo_width=11)
+Compiling module xil_defaultlib.uart_receiver
+Compiling module xil_defaultlib.uart_regs
+Compiling module xil_defaultlib.UART_TOP
+Compiling module xil_defaultlib.GPCORE
+Compiling module xil_defaultlib.apb_gpio
+Compiling module xil_defaultlib.axi_apb_controller
+Compiling module xil_defaultlib.digitaltube_controller
+Compiling module xil_defaultlib.lfsr32
+Compiling module xil_defaultlib.ext_int_ctrl
+Compiling module xil_defaultlib.confreg(SIMULATION=1'b1)
+Compiling module xil_defaultlib.Axi4ReadOnlyErrorSlave
+Compiling module xil_defaultlib.Axi4ReadOnlyDecoder
+Compiling module xil_defaultlib.Axi4WriteOnlyErrorSlave
+Compiling module xil_defaultlib.Axi4WriteOnlyDecoder
+Compiling module xil_defaultlib.StreamArbiter
+Compiling module xil_defaultlib.Axi4ReadOnlyArbiter
+Compiling module xil_defaultlib.StreamFifo
+Compiling module xil_defaultlib.StreamFifoLowLatency
+Compiling module xil_defaultlib.Axi4WriteOnlyArbiter
+Compiling module xil_defaultlib.AxiCrossbar_2x4
+Compiling module xil_defaultlib.soc_top(SIMULATION=1'b1)
+Compiling module xil_defaultlib.sram_sp(AW=21,Init_File="../../....
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav

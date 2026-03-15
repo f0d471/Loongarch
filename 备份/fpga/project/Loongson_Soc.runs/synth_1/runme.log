@@ -1,0 +1,1360 @@
+
+*** Running vivado
+    with args -log soc_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source soc_top.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Mar 12 03:42:46 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source soc_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 530.195 ; gain = 218.602
+Command: read_checkpoint -auto_incremental -incremental E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.srcs/utils_1/imports/synth_1/soc_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.srcs/utils_1/imports/synth_1/soc_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top soc_top -part xc7a200tfbg676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tfbg676-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 35720
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1319.570 ; gain = 542.047
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'pll_locked', assumed default net type 'wire' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/soc_top.sv:145]
+INFO: [Synth 8-11241] undeclared symbol 'debug_CB_state', assumed default net type 'wire' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/soc_top.sv:225]
+WARNING: [Synth 8-8895] 'debug_CB_state' is already implicitly declared on line 225 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/soc_top.sv:562]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'debug_data' is not allowed [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:192]
+INFO: [Synth 8-11241] undeclared symbol 'cmd_block_size', assumed default net type 'wire' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:333]
+INFO: [Synth 8-11241] undeclared symbol 'cmd_stride', assumed default net type 'wire' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:334]
+INFO: [Synth 8-11241] undeclared symbol 'cmd_padding_en', assumed default net type 'wire' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:335]
+INFO: [Synth 8-11241] undeclared symbol 'cmd_padding_words', assumed default net type 'wire' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:336]
+INFO: [Synth 8-11241] undeclared symbol 'cmd_block_count', assumed default net type 'wire' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:337]
+WARNING: [Synth 8-8895] 'cmd_block_size' is already implicitly declared on line 333 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:416]
+WARNING: [Synth 8-8895] 'cmd_stride' is already implicitly declared on line 334 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:417]
+WARNING: [Synth 8-8895] 'cmd_padding_en' is already implicitly declared on line 335 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:418]
+WARNING: [Synth 8-8895] 'cmd_block_count' is already implicitly declared on line 337 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:419]
+WARNING: [Synth 8-8895] 'cmd_padding_words' is already implicitly declared on line 336 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:420]
+WARNING: [Synth 8-6901] identifier 'ctrl_done' is used before its declaration [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:137]
+WARNING: [Synth 8-6901] identifier 'mul_outcome_reg' is used before its declaration [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/PE_core.v:47]
+INFO: [Synth 8-11241] undeclared symbol 'nand_dma_ack_i', assumed default net type 'wire' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/axi_uart_controller.v:179]
+WARNING: [Synth 8-6901] identifier 'state' is used before its declaration [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:193]
+WARNING: [Synth 8-6901] identifier 'S_DONE' is used before its declaration [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:193]
+INFO: [Synth 8-6157] synthesizing module 'soc_top' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/soc_top.sv:37]
+INFO: [Synth 8-6157] synthesizing module 'PIW' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'PIW' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:22]
+INFO: [Synth 8-6157] synthesizing module 'PO8W' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PO8W' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:13]
+INFO: [Synth 8-6157] synthesizing module 'PB8W' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PB8W' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_pll' [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.runs/synth_1/.Xil/Vivado-3740-DESKTOP-HDDM8O8/realtime/clk_pll_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_pll' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.runs/synth_1/.Xil/Vivado-3740-DESKTOP-HDDM8O8/realtime/clk_pll_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rst_sync' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/rst_sync/rst_sync.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rst_sync' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/rst_sync/rst_sync.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PX3W' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'PX3W' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:40]
+INFO: [Synth 8-6157] synthesizing module 'PIUW' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'PIUW' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v:31]
+INFO: [Synth 8-6157] synthesizing module 'core_top' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mycpu_top.v:1]
+	Parameter TLBNUM bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'if_stage' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/if_stage.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'if_stage' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/if_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'id_stage' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/id_stage.v:3]
+INFO: [Synth 8-6157] synthesizing module 'decoder_6_64' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:85]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_6_64' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:85]
+INFO: [Synth 8-6157] synthesizing module 'decoder_4_16' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_4_16' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:26]
+INFO: [Synth 8-6157] synthesizing module 'decoder_2_4' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_2_4' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decoder_5_32' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_5_32' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:57]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/regfile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/regfile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'id_stage' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/id_stage.v:3]
+INFO: [Synth 8-6157] synthesizing module 'exe_stage' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/exe_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'alu' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'exe_stage' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/exe_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'div' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/div.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'div' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/div.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mul' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:120]
+INFO: [Synth 8-6157] synthesizing module 'BoothInterBase' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:29]
+INFO: [Synth 8-6157] synthesizing module 'BoothBase' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'BoothBase' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:14]
+INFO: [Synth 8-6157] synthesizing module 'YDecoder' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'YDecoder' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BoothInterBase' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:29]
+INFO: [Synth 8-6157] synthesizing module 'WallaceTreeBase' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:77]
+INFO: [Synth 8-6157] synthesizing module 'addr' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'addr' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'WallaceTreeBase' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'mul' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:120]
+INFO: [Synth 8-6157] synthesizing module 'mem_stage' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mem_stage.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'mem_stage' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mem_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'wb_stage' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/wb_stage.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'wb_stage' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/wb_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'csr' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/csr.v:4]
+	Parameter TLBNUM bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'csr' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/csr.v:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_bridge' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/axi_bridge.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bridge' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/axi_bridge.v:1]
+INFO: [Synth 8-6157] synthesizing module 'addr_trans' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/addr_trans.v:3]
+	Parameter TLBNUM bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'tlb_entry' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tlb_entry.v:1]
+INFO: [Synth 8-6157] synthesizing module 'encoder_32_5' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:69]
+INFO: [Synth 8-6157] synthesizing module 'encoder_16_4' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:38]
+INFO: [Synth 8-6157] synthesizing module 'encoder_4_2' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_4_2' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_16_4' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_32_5' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:69]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tlb_entry.v:135]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tlb_entry.v:136]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tlb_entry.v:139]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tlb_entry.v:148]
+INFO: [Synth 8-6155] done synthesizing module 'tlb_entry' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tlb_entry.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'addr_trans' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/addr_trans.v:3]
+INFO: [Synth 8-6157] synthesizing module 'icache' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v:1]
+INFO: [Synth 8-6157] synthesizing module 'data_bank_sram' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/ram_wrap/cache_sram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'data_bank_sram' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/ram_wrap/cache_sram.v:3]
+INFO: [Synth 8-6157] synthesizing module 'tagv_sram' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/ram_wrap/cache_sram.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'tagv_sram' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/ram_wrap/cache_sram.v:52]
+INFO: [Synth 8-6157] synthesizing module 'one_valid_n' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:100]
+	Parameter n bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'one_valid_n' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:100]
+INFO: [Synth 8-6157] synthesizing module 'lfsr' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/dcache.v:635]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/dcache.v:635]
+INFO: [Synth 8-6155] done synthesizing module 'icache' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dcache' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/dcache.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dcache' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/dcache.v:1]
+INFO: [Synth 8-6157] synthesizing module 'btb' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/btb.v:1]
+INFO: [Synth 8-6157] synthesizing module 'one_valid_32' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:147]
+INFO: [Synth 8-6155] done synthesizing module 'one_valid_32' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:147]
+INFO: [Synth 8-6157] synthesizing module 'one_valid_16' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'one_valid_16' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'btb' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/btb.v:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mycpu_top.v:1057]
+INFO: [Synth 8-6157] synthesizing module 'perf_counter' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/perf_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'perf_counter' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/perf_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'core_top' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mycpu_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Axi_CDC' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:6]
+INFO: [Synth 8-6157] synthesizing module 'StreamFifoCC' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1122]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC_9' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1586]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC_9' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1586]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC_10' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1562]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC_10' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1562]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC_11' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1538]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC_11' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1538]
+INFO: [Synth 8-6155] done synthesizing module 'StreamFifoCC' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1122]
+INFO: [Synth 8-6157] synthesizing module 'StreamFifoCC_1' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:921]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC_7' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1514]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC_7' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1514]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC_8' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1490]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC_8' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1490]
+INFO: [Synth 8-6155] done synthesizing module 'StreamFifoCC_1' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:921]
+INFO: [Synth 8-6157] synthesizing module 'StreamFifoCC_2' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:719]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC_4' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1466]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC_4' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1466]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC_5' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1442]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC_5' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1442]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC_6' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1418]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC_6' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1418]
+INFO: [Synth 8-6155] done synthesizing module 'StreamFifoCC_2' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:719]
+INFO: [Synth 8-6157] synthesizing module 'StreamFifoCC_3' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:487]
+INFO: [Synth 8-6155] done synthesizing module 'StreamFifoCC_3' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:487]
+INFO: [Synth 8-6157] synthesizing module 'StreamFifoCC_4' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:279]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1390]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1390]
+INFO: [Synth 8-6157] synthesizing module 'BufferCC_1' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1366]
+INFO: [Synth 8-6155] done synthesizing module 'BufferCC_1' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1366]
+INFO: [Synth 8-6155] done synthesizing module 'StreamFifoCC_4' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:279]
+INFO: [Synth 8-6155] done synthesizing module 'Axi_CDC' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:6]
+INFO: [Synth 8-6157] synthesizing module 'CB_top' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:5]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:234]
+INFO: [Synth 8-6157] synthesizing module 'CB_Controller' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'CB_Controller' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:35]
+INFO: [Synth 8-6157] synthesizing module 'mac_top' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/mac_top.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sram' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/sram.v:6]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sram' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/sram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sram__parameterized0' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/sram.v:6]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter INIT_FILE bound to: D://IC//Matrix_coaccelerator//vsrc//vector.mem - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'D://IC//Matrix_coaccelerator//vsrc//vector.mem'; please make sure the file is added to project and has read permission, ignoring [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/sram.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'sram__parameterized0' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/sram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'sram__parameterized1' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/sram.v:6]
+	Parameter DATA_WIDTH bound to: 1024 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sram__parameterized1' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/sram.v:6]
+WARNING: [Synth 8-7071] port 'rst' of module 'sram' is unconnected for instance 'sram_outcome_inst' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/mac_top.v:149]
+WARNING: [Synth 8-7023] instance 'sram_outcome_inst' of module 'sram' has 8 connections declared, but only 7 given [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/mac_top.v:149]
+INFO: [Synth 8-6157] synthesizing module 'PE_core' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/PE_core.v:13]
+	Parameter ARRAY_SIZE bound to: 32 - type: integer 
+	Parameter SRAM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter K_ACCUM_DEPTH bound to: 64 - type: integer 
+	Parameter OUTCOME_WIDTH bound to: 32 - type: integer 
+	Parameter MAC_LATENCY bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fp_mac_pipelined_acc' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/PE_core.v:138]
+INFO: [Synth 8-6157] synthesizing module 'fpmul_seq_pipeline' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:22]
+INFO: [Synth 8-6157] synthesizing module 'gMultiplier' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:103]
+INFO: [Synth 8-6157] synthesizing module 'multiplication_normaliser' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'multiplication_normaliser' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'gMultiplier' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'fpmul_seq_pipeline' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:22]
+INFO: [Synth 8-6157] synthesizing module 'fpadd_seq' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:12]
+INFO: [Synth 8-6157] synthesizing module 'generalAdder' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:88]
+INFO: [Synth 8-6157] synthesizing module 'addition_normaliser' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:198]
+INFO: [Synth 8-6155] done synthesizing module 'addition_normaliser' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:198]
+INFO: [Synth 8-6155] done synthesizing module 'generalAdder' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'fpadd_seq' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'fp_mac_pipelined_acc' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/PE_core.v:138]
+INFO: [Synth 8-6155] done synthesizing module 'PE_core' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/PE_core.v:13]
+INFO: [Synth 8-6157] synthesizing module 'write_out' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/write_out.v:6]
+	Parameter ARRAY_SIZE bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter K_ACCUM_DEPTH bound to: 64 - type: integer 
+	Parameter MAC_LATENCY bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'write_out' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/write_out.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mac_top' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/mac_top.v:6]
+INFO: [Synth 8-6157] synthesizing module 'axi_dma_controller' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v:5]
+	Parameter ADDR_WD bound to: 32 - type: integer 
+	Parameter DATA_WD bound to: 32 - type: integer 
+	Parameter ID_WD bound to: 4 - type: integer 
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v:444]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v:445]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v:466]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v:467]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v:473]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dma_controller' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v:5]
+WARNING: [Synth 8-689] width (7) of port connection 'cmd_block_count' does not match port width (6) of module 'axi_dma_controller' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:458]
+INFO: [Synth 8-6155] done synthesizing module 'CB_top' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:5]
+INFO: [Synth 8-6157] synthesizing module 'axi_wrap_ram_sp_ext' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/ram_wrap/axi_wrap_ram_sp_ext.v:34]
+INFO: [Synth 8-6157] synthesizing module 'axi2sram_sp_ext' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/axi2sram_sp_ext.v:20]
+	Parameter AXI_ID_WIDTH bound to: 5 - type: integer 
+	Parameter AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/axi2sram_sp_ext.v:264]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/axi2sram_sp_ext.v:307]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/axi2sram_sp_ext.v:171]
+INFO: [Synth 8-6155] done synthesizing module 'axi2sram_sp_ext' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/axi2sram_sp_ext.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'axi_wrap_ram_sp_ext' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/ram_wrap/axi_wrap_ram_sp_ext.v:34]
+INFO: [Synth 8-6157] synthesizing module 'fifo' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/fifo.v:1]
+	Parameter D_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/fifo.v:1]
+INFO: [Synth 8-6157] synthesizing module 'axi_uart_controller' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/axi_uart_controller.v:36]
+INFO: [Synth 8-6157] synthesizing module 'axi2apb_bridge' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/axi2apb.v:36]
+INFO: [Synth 8-226] default block is never used [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/axi2apb.v:337]
+INFO: [Synth 8-6155] done synthesizing module 'axi2apb_bridge' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/axi2apb.v:36]
+INFO: [Synth 8-6157] synthesizing module 'apb_mux2' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/apb_mux2.v:38]
+INFO: [Synth 8-6157] synthesizing module 'arb_2_1' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/apb_mux2.v:185]
+INFO: [Synth 8-6155] done synthesizing module 'arb_2_1' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/apb_mux2.v:185]
+INFO: [Synth 8-6155] done synthesizing module 'apb_mux2' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/apb_mux2.v:38]
+INFO: [Synth 8-6157] synthesizing module 'UART_TOP' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_top.v:36]
+INFO: [Synth 8-6157] synthesizing module 'uart_regs' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_regs.v:39]
+INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_transmitter.v:36]
+INFO: [Synth 8-6157] synthesizing module 'uart_tfifo' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_tfifo.v:36]
+INFO: [Synth 8-6157] synthesizing module 'raminfr' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/raminfr.v:34]
+	Parameter addr_width bound to: 4 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter depth bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'raminfr' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/raminfr.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_tfifo.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_transmitter.v:36]
+INFO: [Synth 8-6157] synthesizing module 'uart_sync_flops' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_sync_flops.v:34]
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_value bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'uart_sync_flops' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_sync_flops.v:34]
+INFO: [Synth 8-6157] synthesizing module 'uart_receiver' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_receiver.v:36]
+INFO: [Synth 8-6157] synthesizing module 'uart_rfifo' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_rfifo.v:36]
+	Parameter fifo_width bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rfifo' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_rfifo.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'uart_receiver' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_receiver.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'uart_regs' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_regs.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'UART_TOP' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_top.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'axi_uart_controller' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/axi_uart_controller.v:36]
+INFO: [Synth 8-6157] synthesizing module 'confreg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:41]
+	Parameter SIMULATION bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'digitaltube_controller' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/digitaltube_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'digitaltube_controller' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/digitaltube_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lfsr32' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:389]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr32' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:389]
+INFO: [Synth 8-6157] synthesizing module 'ext_int_ctrl' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/ext_int_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ext_int_ctrl' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/ext_int_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'confreg' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:41]
+INFO: [Synth 8-6157] synthesizing module 'AxiCrossbar_2x4' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:7]
+INFO: [Synth 8-6157] synthesizing module 'Axi4ReadOnlyDecoder' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3023]
+INFO: [Synth 8-6157] synthesizing module 'Axi4ReadOnlyErrorSlave' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3576]
+INFO: [Synth 8-6155] done synthesizing module 'Axi4ReadOnlyErrorSlave' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3576]
+INFO: [Synth 8-6155] done synthesizing module 'Axi4ReadOnlyDecoder' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3023]
+INFO: [Synth 8-6157] synthesizing module 'Axi4WriteOnlyDecoder' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:2625]
+INFO: [Synth 8-6157] synthesizing module 'Axi4WriteOnlyErrorSlave' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3508]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'Axi4WriteOnlyErrorSlave' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3508]
+INFO: [Synth 8-6155] done synthesizing module 'Axi4WriteOnlyDecoder' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:2625]
+INFO: [Synth 8-6155] done synthesizing module 'StreamArbiter' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3402]
+INFO: [Synth 8-6155] done synthesizing module 'Axi4ReadOnlyArbiter' (0#1) [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:2479]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element csr_brk_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/csr.v:748]
+WARNING: [Synth 8-6014] Unused sequential element read_respond_state_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/axi_bridge.v:223]
+WARNING: [Synth 8-6014] Unused sequential element s0_fetch_r_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tlb_entry.v:110]
+WARNING: [Synth 8-6014] Unused sequential element s1_fetch_r_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tlb_entry.v:116]
+WARNING: [Synth 8-6014] Unused sequential element request_buffer_op_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v:128]
+WARNING: [Synth 8-6014] Unused sequential element request_buffer_wstrb_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v:132]
+WARNING: [Synth 8-6014] Unused sequential element request_buffer_wdata_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v:133]
+WARNING: [Synth 8-3848] Net wr_type in module/entity icache does not have driver. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v:33]
+WARNING: [Synth 8-3848] Net wr_addr in module/entity icache does not have driver. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v:34]
+WARNING: [Synth 8-3848] Net wr_wstrb in module/entity icache does not have driver. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v:35]
+WARNING: [Synth 8-3848] Net wr_data in module/entity icache does not have driver. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v:36]
+WARNING: [Synth 8-6014] Unused sequential element popCC_addressGen_rData_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1282]
+WARNING: [Synth 8-6014] Unused sequential element popCC_addressGen_rData_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:1053]
+WARNING: [Synth 8-6014] Unused sequential element popCC_addressGen_rData_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:855]
+WARNING: [Synth 8-6014] Unused sequential element popCC_addressGen_rData_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:636]
+WARNING: [Synth 8-6014] Unused sequential element popCC_addressGen_rData_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v:415]
+WARNING: [Synth 8-6014] Unused sequential element buf_len_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:219]
+WARNING: [Synth 8-6014] Unused sequential element buf_size_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:220]
+WARNING: [Synth 8-6014] Unused sequential element buf_burst_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:221]
+WARNING: [Synth 8-6014] Unused sequential element buf_lock_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:222]
+WARNING: [Synth 8-6014] Unused sequential element buf_cache_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:223]
+WARNING: [Synth 8-6014] Unused sequential element buf_prot_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:224]
+WARNING: [Synth 8-3936] Found unconnected internal register 'o_mantissa_reg' and it is trimmed from '25' to '23' bits. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:123]
+WARNING: [Synth 8-6014] Unused sequential element o_sign_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:58]
+WARNING: [Synth 8-6014] Unused sequential element o_exponent_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:59]
+WARNING: [Synth 8-6014] Unused sequential element o_mantissa_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:60]
+WARNING: [Synth 8-3848] Net debug_data in module/entity mac_top does not have driver. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/mac_top.v:41]
+WARNING: [Synth 8-6014] Unused sequential element ax_req_q_size_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/axi2sram_sp_ext.v:353]
+WARNING: [Synth 8-6014] Unused sequential element apb_wr_size_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/axi2apb.v:201]
+WARNING: [Synth 8-6014] Unused sequential element rbit_in_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_receiver.v:115]
+WARNING: [Synth 8-7137] Register dpy0_data_reg in module digitaltube_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/digitaltube_controller.v:61]
+WARNING: [Synth 8-7137] Register dpy1_data_reg in module digitaltube_controller has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/digitaltube_controller.v:84]
+WARNING: [Synth 8-6014] Unused sequential element buf_len_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:143]
+WARNING: [Synth 8-6014] Unused sequential element buf_size_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:144]
+WARNING: [Synth 8-6014] Unused sequential element buf_burst_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:145]
+WARNING: [Synth 8-6014] Unused sequential element buf_lock_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:146]
+WARNING: [Synth 8-6014] Unused sequential element buf_cache_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:147]
+WARNING: [Synth 8-6014] Unused sequential element buf_prot_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v:148]
+WARNING: [Synth 8-3848] Net io_axi_r_payload_data in module/entity Axi4ReadOnlyErrorSlave does not have driver. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3589]
+WARNING: [Synth 8-6014] Unused sequential element logic_ptr_wentUp_reg was removed.  [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3752]
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[31] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[30] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[29] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[28] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[27] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[26] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[25] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[24] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[23] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[22] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[21] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[20] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[19] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[18] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[17] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[16] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[15] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[14] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[13] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[12] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[11] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[10] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[9] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[8] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[7] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[6] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[5] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[4] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[3] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[2] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[1] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_addr[0] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_len[7] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_len[6] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_len[5] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_len[4] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_len[3] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_len[2] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_len[1] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_len[0] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_size[2] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_size[1] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_size[0] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_burst[1] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_burst[0] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_lock[0] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_cache[3] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_cache[2] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_cache[1] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_cache[0] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_prot[2] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_prot[1] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_aw_payload_prot[0] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[31] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[30] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[29] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[28] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[27] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[26] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[25] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[24] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[23] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[22] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[21] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[20] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[19] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[18] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[17] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[16] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[15] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[14] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[13] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[12] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[11] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[10] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[9] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[8] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[7] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[6] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[5] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[4] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[3] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[2] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[1] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_data[0] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_strb[3] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_strb[2] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_strb[1] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_w_payload_strb[0] in module Axi4WriteOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[31] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[30] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[29] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[28] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[27] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[26] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[25] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[24] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[23] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[22] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_axi_r_payload_data[21] in module Axi4ReadOnlyErrorSlave is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1637.207 ; gain = 859.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1637.207 ; gain = 859.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1637.207 ; gain = 859.684
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1637.207 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.gen/sources_1/ip/clk_pll/clk_pll/clk_pll_in_context.xdc] for cell 'pll_clk.u_clk_pll'
+Finished Parsing XDC File [e:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.gen/sources_1/ip/clk_pll/clk_pll/clk_pll_in_context.xdc] for cell 'pll_clk.u_clk_pll'
+Parsing XDC File [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:4]
+WARNING: [Vivado 12-508] No pins matched 'pll_clk.u_clk_pll/inst/plle2_adv_inst/CLKOUT0'. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:284]
+WARNING: [Vivado 12-508] No pins matched 'pll_clk.u_clk_pll/inst/plle2_adv_inst/CLKOUT1'. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:285]
+WARNING: [Vivado 12-627] No clocks matched 'cpu_clk'. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:287]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:287]
+WARNING: [Vivado 12-627] No clocks matched 'sys_clk'. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:287]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:287]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:289]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:290]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:292]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:293]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:294]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:295]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:296]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:297]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:298]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:299]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:300]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:301]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:302]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:303]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:305]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:306]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:308]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:309]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:310]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:311]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:312]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:313]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:314]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:315]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:316]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:317]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:318]
+WARNING: [Vivado 12-646] clock 'sys_clk' not found. [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc:319]
+Finished Parsing XDC File [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/soc_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/soc_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/soc_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.180 . Memory (MB): peak = 1972.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1973.020 ; gain = 0.059
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 1975.730 ; gain = 1198.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 1975.730 ; gain = 1198.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:30 ; elapsed = 00:01:35 . Memory (MB): peak = 1975.730 ; gain = 1198.207
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'br_target_inst_req_state_reg' in module 'if_stage'
+WARNING: [Synth 8-3936] Found unconnected internal register 'SecStageCarry_reg' and it is trimmed from '17' to '16' bits. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v:158]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ms_to_ws_bus_r_reg' and it is trimmed from '493' to '283' bits. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/wb_stage.v:178]
+INFO: [Synth 8-802] inferred FSM for state register 'write_requst_state_reg' in module 'axi_bridge'
+INFO: [Synth 8-802] inferred FSM for state register 'main_state_reg' in module 'icache'
+INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'axi2sram_sp_ext'
+INFO: [Synth 8-802] inferred FSM for state register 'csr_rw_sm_reg' in module 'axi2apb_bridge'
+INFO: [Synth 8-802] inferred FSM for state register 'tstate_reg' in module 'uart_transmitter'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'uart_receiver'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+br_target_inst_req_empty |                              001 |                              001
+br_target_inst_req_wait_slot |                              010 |                              010
+br_target_inst_req_wait_br_target |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'br_target_inst_req_state_reg' using encoding 'one-hot' in module 'if_stage'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+     write_request_empty |                               00 |                              000
+         write_data_wait |                               01 |                              101
+    write_data_transform |                               10 |                              100
+            write_wait_b |                               11 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'write_requst_state_reg' using encoding 'sequential' in module 'axi_bridge'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               main_idle |                            00001 |                            00001
+             main_lookup |                            00010 |                            00010
+            main_replace |                            01000 |                            01000
+             main_refill |                            10000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'main_state_reg' using encoding 'one-hot' in module 'icache'
+WARNING: [Synth 8-327] inferring latch for variable 'i_e_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:132]
+WARNING: [Synth 8-327] inferring latch for variable 'i_m_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:133]
+WARNING: [Synth 8-327] inferring latch for variable 'out_e_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:212]
+WARNING: [Synth 8-327] inferring latch for variable 'out_m_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:213]
+WARNING: [Synth 8-327] inferring latch for variable 'o_mantissa_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:124]
+WARNING: [Synth 8-327] inferring latch for variable 'o_exponent_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:123]
+WARNING: [Synth 8-327] inferring latch for variable 'o_sign_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:122]
+WARNING: [Synth 8-327] inferring latch for variable 'i_e_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:116]
+WARNING: [Synth 8-327] inferring latch for variable 'i_m_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:117]
+WARNING: [Synth 8-327] inferring latch for variable 'acc_reg_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/PE_core.v:171]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                    READ |                              001 |                              001
+               READ_ADDR |                              010 |                              110
+             WAIT_WVALID |                              011 |                              100
+               WRITE_NOP |                              100 |                              101
+                   WRITE |                              101 |                              010
+                  SEND_B |                              110 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_q_reg' using encoding 'sequential' in module 'axi2sram_sp_ext'
+WARNING: [Synth 8-327] inferring latch for variable 's_rdata_reg' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/axi2sram_sp_ext.v:239]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+          CSR_RW_SM_IDLE |                             0001 |                             0001
+  CSR_RW_SM_GET_AXI_ADDR |                             0010 |                             0010
+  CSR_RW_SM_SEND_AXI_RSP |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'csr_rw_sm_reg' using encoding 'one-hot' in module 'axi2apb_bridge'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                              000 |                              000
+              s_pop_byte |                              001 |                              101
+            s_send_start |                              010 |                              001
+             s_send_byte |                              011 |                              010
+           s_send_parity |                              100 |                              011
+           s_send_guard1 |                              101 |                              110
+             s_send_stop |                              110 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tstate_reg' using encoding 'sequential' in module 'uart_transmitter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sr_idle |                             0000 |                             0000
+            sr_rec_start |                             0001 |                             0001
+          sr_rec_prepare |                             0010 |                             0110
+              sr_rec_bit |                             0011 |                             0010
+              sr_end_bit |                             0100 |                             0111
+           sr_rec_parity |                             0101 |                             0011
+         sr_ca_lc_parity |                             0110 |                             1000
+         sr_check_parity |                             0111 |                             0101
+                sr_wait1 |                             1000 |                             1001
+             sr_rec_stop |                             1001 |                             0100
+                 sr_push |                             1010 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'sequential' in module 'uart_receiver'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:41 ; elapsed = 00:01:49 . Memory (MB): peak = 1975.730 ; gain = 1198.207
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   3 Input   64 Bit       Adders := 1     
+	   3 Input   33 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 22    
+	   3 Input   32 Bit       Adders := 4     
+	   2 Input   30 Bit       Adders := 1     
+	   3 Input   25 Bit       Adders := 96    
+	   2 Input   25 Bit       Adders := 32    
+	   2 Input   20 Bit       Adders := 3     
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 202   
+	   3 Input    8 Bit       Adders := 64    
+	   2 Input    7 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 7     
+	   2 Input    4 Bit       Adders := 14    
+	   3 Input    4 Bit       Adders := 12    
+	   2 Input    3 Bit       Adders := 30    
+	   3 Input    3 Bit       Adders := 10    
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      4 Bit         XORs := 5     
+	   2 Input      3 Bit         XORs := 6     
+	   3 Input      3 Bit         XORs := 4     
+	   2 Input      1 Bit         XORs := 137   
+	   5 Input      1 Bit         XORs := 1     
++---XORs : 
+	                9 Bit    Wide XORs := 1     
+	                8 Bit    Wide XORs := 2     
+	                7 Bit    Wide XORs := 2     
+	                6 Bit    Wide XORs := 2     
+	                5 Bit    Wide XORs := 2     
++---Registers : 
+	             1024 Bit    Registers := 7     
+	              425 Bit    Registers := 1     
+	              350 Bit    Registers := 1     
+	              283 Bit    Registers := 1     
+	              128 Bit    Registers := 1     
+	              109 Bit    Registers := 1     
+	               64 Bit    Registers := 17    
+	               57 Bit    Registers := 2     
+	               39 Bit    Registers := 1     
+	               38 Bit    Registers := 1     
+	               37 Bit    Registers := 1     
+	               33 Bit    Registers := 3     
+	               32 Bit    Registers := 2388  
+	               30 Bit    Registers := 48    
+	               28 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               21 Bit    Registers := 8     
+	               20 Bit    Registers := 3     
+	               19 Bit    Registers := 34    
+	               16 Bit    Registers := 3     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 37    
+	                9 Bit    Registers := 6     
+	                8 Bit    Registers := 31    
+	                7 Bit    Registers := 20    
+	                6 Bit    Registers := 38    
+	                5 Bit    Registers := 32    
+	                4 Bit    Registers := 49    
+	                3 Bit    Registers := 54    
+	                2 Bit    Registers := 42    
+	                1 Bit    Registers := 309   
++---Multipliers : 
+	              32x32  Multipliers := 2     
+	               3x32  Multipliers := 1     
++---RAMs : 
+	               8K Bit	(256 X 32 bit)          RAMs := 32    
+	               5K Bit	(256 X 21 bit)          RAMs := 8     
+	              960 Bit	(32 X 30 bit)          RAMs := 1     
+	              312 Bit	(8 X 39 bit)          RAMs := 1     
+	              296 Bit	(8 X 37 bit)          RAMs := 1     
+	              240 Bit	(8 X 30 bit)          RAMs := 1     
+	              228 Bit	(4 X 57 bit)          RAMs := 2     
+	              128 Bit	(16 X 8 bit)          RAMs := 2     
+	               24 Bit	(4 X 6 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input 1024 Bit        Muxes := 1     
+	   4 Input  128 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 1     
+	   2 Input   65 Bit        Muxes := 4     
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   48 Bit        Muxes := 64    
+	   2 Input   33 Bit        Muxes := 3     
+	   3 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 464   
+	   3 Input   32 Bit        Muxes := 4     
+	   7 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 78    
+	   5 Input   32 Bit        Muxes := 33    
+	   2 Input   30 Bit        Muxes := 3     
+	   3 Input   28 Bit        Muxes := 1     
+	   2 Input   28 Bit        Muxes := 4     
+	   2 Input   25 Bit        Muxes := 256   
+	   2 Input   24 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 11    
+	   2 Input   19 Bit        Muxes := 7     
+	   2 Input   16 Bit        Muxes := 3     
+	   2 Input   11 Bit        Muxes := 4     
+	  18 Input   11 Bit        Muxes := 1     
+	  11 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 5     
+	   7 Input   10 Bit        Muxes := 1     
+	   8 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 256   
+	  18 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
+	  11 Input    8 Bit        Muxes := 2     
+	   8 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 2     
+	  18 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 3     
+	   3 Input    7 Bit        Muxes := 1     
+	   7 Input    7 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 31    
+	   4 Input    5 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   7 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 57    
+	   5 Input    4 Bit        Muxes := 2     
+	   6 Input    4 Bit        Muxes := 33    
+	   3 Input    4 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 7     
+	  11 Input    4 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 54    
+	   4 Input    3 Bit        Muxes := 3     
+	  18 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 5     
+	  11 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 60    
+	   4 Input    2 Bit        Muxes := 8     
+	   6 Input    2 Bit        Muxes := 1     
+	  18 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 3221  
+	   3 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 83    
+	   6 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 37    
+	   7 Input    1 Bit        Muxes := 34    
+	  18 Input    1 Bit        Muxes := 4     
+	  11 Input    1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP M1/i_e1, operation Mode is: A*B.
+DSP Report: operator M1/i_e1 is absorbed into DSP M1/i_e1.
+DSP Report: operator M1/i_e1 is absorbed into DSP M1/i_e1.
+DSP Report: Generating DSP M1/i_e1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator M1/i_e1 is absorbed into DSP M1/i_e1.
+DSP Report: operator M1/i_e1 is absorbed into DSP M1/i_e1.
+DSP Report: Generating DSP current_mi_addr2, operation Mode is: A*B.
+DSP Report: operator current_mi_addr2 is absorbed into DSP current_mi_addr2.
+DSP Report: operator current_mi_addr2 is absorbed into DSP current_mi_addr2.
+DSP Report: Generating DSP current_mi_addr2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator current_mi_addr2 is absorbed into DSP current_mi_addr2.
+DSP Report: operator current_mi_addr2 is absorbed into DSP current_mi_addr2.
+DSP Report: Generating DSP current_mi_addr2, operation Mode is: A*B.
+DSP Report: operator current_mi_addr2 is absorbed into DSP current_mi_addr2.
+DSP Report: operator current_mi_addr2 is absorbed into DSP current_mi_addr2.
+DSP Report: Generating DSP current_mi_addr2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator current_mi_addr2 is absorbed into DSP current_mi_addr2.
+DSP Report: operator current_mi_addr2 is absorbed into DSP current_mi_addr2.
+DSP Report: Generating DSP dma_bytes_total1, operation Mode is: A*B.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: Generating DSP dma_bytes_total1, operation Mode is: A*B.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: Generating DSP dma_bytes_total1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: Generating DSP dma_bytes_total1, operation Mode is: A*B.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: Generating DSP dma_bytes_total1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: Generating DSP dma_bytes_total1, operation Mode is: A*B.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: Generating DSP dma_bytes_total1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+DSP Report: operator dma_bytes_total1 is absorbed into DSP dma_bytes_total1.
+WARNING: [Synth 8-3936] Found unconnected internal register 'r_cmd_len_reg' and it is trimmed from '11' to '10' bits. [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v:185]
+DSP Report: Generating DSP r_m_axi_araddr_reg, operation Mode is: (C'+A2*B2)'.
+DSP Report: register finished_block_cnt_reg is absorbed into DSP r_m_axi_araddr_reg.
+DSP Report: register r_cmd_stride_reg is absorbed into DSP r_m_axi_araddr_reg.
+DSP Report: register r_cmd_src_addr_reg is absorbed into DSP r_m_axi_araddr_reg.
+DSP Report: register r_m_axi_araddr_reg is absorbed into DSP r_m_axi_araddr_reg.
+DSP Report: operator r_m_axi_araddr0 is absorbed into DSP r_m_axi_araddr_reg.
+DSP Report: operator r_m_axi_araddr1 is absorbed into DSP r_m_axi_araddr_reg.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[47]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[17]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[16]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[15]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[14]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[13]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[12]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[11]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[10]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[9]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[8]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[7]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[6]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[5]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[4]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[3]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[2]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[1]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (M1/i_m_reg[0]) is unused and will be removed from module fpmul_seq_pipeline.
+WARNING: [Synth 8-3332] Sequential element (gAdder/norm1/out_m_reg[0]) is unused and will be removed from module fpadd_seq.
+WARNING: [Synth 8-3332] Sequential element (gAdder/i_m_reg[24]) is unused and will be removed from module fpadd_seq.
+WARNING: [Synth 8-3332] Sequential element (AA_axi2apb_bridge_cpu/FSM_onehot_csr_rw_sm_reg[2]) is unused and will be removed from module axi_uart_controller.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:47 ; elapsed = 00:06:17 . Memory (MB): peak = 2151.953 ; gain = 1374.430
+---------------------------------------------------------------------------------
+ Sort Area is CB_top__GC0 dma_bytes_total1_9 : 0 0 : 2701 5479 : Used 1 time 0
+ Sort Area is CB_top__GC0 dma_bytes_total1_9 : 0 1 : 2778 5479 : Used 1 time 0
+ Sort Area is CB_top__GC0 dma_bytes_total1_b : 0 0 : 2759 5418 : Used 1 time 0
+ Sort Area is CB_top__GC0 dma_bytes_total1_b : 0 1 : 2659 5418 : Used 1 time 0
+ Sort Area is fp_mac_pipelined_acc M1/i_e1_0 : 0 0 : 3446 4760 : Used 32 time 0
+ Sort Area is fp_mac_pipelined_acc M1/i_e1_0 : 0 1 : 1314 4760 : Used 32 time 0
+ Sort Area is CB_top__GC0 current_mi_addr2_3 : 0 0 : 2701 4732 : Used 1 time 0
+ Sort Area is CB_top__GC0 current_mi_addr2_3 : 0 1 : 2031 4732 : Used 1 time 0
+ Sort Area is CB_top__GC0 dma_bytes_total1_e : 0 0 : 2701 4456 : Used 1 time 0
+ Sort Area is CB_top__GC0 dma_bytes_total1_e : 0 1 : 1755 4456 : Used 1 time 0
+ Sort Area is CB_top__GC0 current_mi_addr2_6 : 0 0 : 2026 3727 : Used 1 time 0
+ Sort Area is CB_top__GC0 current_mi_addr2_6 : 0 1 : 1701 3727 : Used 1 time 0
+ Sort Area is CB_top__GC0 dma_bytes_total1_10 : 0 0 : 1755 1755 : Used 1 time 0
+ Sort Area is CB_top__GC0 r_m_axi_araddr_reg_12 : 0 0 : 663 663 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++--------------+-----------------+---------------+----------------+
+|Module Name   | RTL Object      | Depth x Width | Implemented As | 
++--------------+-----------------+---------------+----------------+
+|CB_Controller | mac_access_mode | 32x1          | LUT            | 
+|CB_Controller | mac_access_mode | 32x1          | LUT            | 
++--------------+-----------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------------------------------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                               | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|soc_top                                                   | icache/tagv_ram_way[0].u/mem_reg_reg                  | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|soc_top                                                   | icache/tagv_ram_way[1].u/mem_reg_reg                  | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|soc_top                                                   | icache/tagv_ram_way[2].u/mem_reg_reg                  | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|soc_top                                                   | icache/tagv_ram_way[3].u/mem_reg_reg                  | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[1].data_ram_bank[0].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[1].data_ram_bank[1].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[1].data_ram_bank[2].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[1].data_ram_bank[3].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[2].data_ram_bank[0].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[2].data_ram_bank[1].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[2].data_ram_bank[2].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[2].data_ram_bank[3].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[3].data_ram_bank[0].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[3].data_ram_bank[1].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[3].data_ram_bank[2].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[3].data_ram_bank[3].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[0].data_ram_bank[0].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[0].data_ram_bank[1].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[0].data_ram_bank[2].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[0].data_ram_bank[3].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[0].data_ram_bank[0].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[0].data_ram_bank[1].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[0].data_ram_bank[2].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[0].data_ram_bank[3].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[1].data_ram_bank[0].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[1].data_ram_bank[1].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[1].data_ram_bank[2].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[1].data_ram_bank[3].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[2].data_ram_bank[0].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[2].data_ram_bank[1].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[2].data_ram_bank[2].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[2].data_ram_bank[3].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[3].data_ram_bank[0].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[3].data_ram_bank[1].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[3].data_ram_bank[2].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[3].data_ram_bank[3].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache                                      | tagv_ram_way[0].u/mem_reg_reg                         | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|u_core_topi_2/dcache                                      | tagv_ram_way[1].u/mem_reg_reg                         | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|u_core_topi_2/dcache                                      | tagv_ram_way[2].u/mem_reg_reg                         | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|u_core_topi_2/dcache                                      | tagv_ram_way[3].u/mem_reg_reg                         | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++----------------------------------------------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------------------------+------------------------------------------------------------------------+----------------+----------------------+---------------+
+|Module Name                        | RTL Object                                                             | Inference      | Size (Depth x Width) | Primitives    | 
++-----------------------------------+------------------------------------------------------------------------+----------------+----------------------+---------------+
+|u_core_topi_1/id_stage             | u_regfile/rf_reg                                                       | Implied        | 32 x 32              | RAM32M x 12   | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_ppn0_reg                                                           | Implied        | 32 x 20              | RAM32M x 12   | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_ppn1_reg                                                           | Implied        | 32 x 20              | RAM32M x 12   | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_v0_reg                                                             | Implied        | 32 x 1               | RAM32X1D x 3  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_v1_reg                                                             | Implied        | 32 x 1               | RAM32X1D x 3  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_d0_reg                                                             | Implied        | 32 x 1               | RAM32X1D x 3  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_d1_reg                                                             | Implied        | 32 x 1               | RAM32X1D x 3  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_mat0_reg                                                           | Implied        | 32 x 2               | RAM32X1D x 6  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_mat1_reg                                                           | Implied        | 32 x 2               | RAM32X1D x 6  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_plv0_reg                                                           | Implied        | 32 x 2               | RAM32X1D x 6  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_plv1_reg                                                           | Implied        | 32 x 2               | RAM32X1D x 6  | 
+|u_core_topi_2/dcache               | way_d_reg_reg                                                          | Implied        | 256 x 4              | RAM64M x 16   | 
+|u_core_topi_2/btb                  | btb_target_reg                                                         | Implied        | 32 x 30              | RAM32M x 15   | 
+|u_core_topi_2/btb                  | ras_reg                                                                | Implied        | 8 x 30               | RAM32M x 5    | 
+|i_0/u_axi_cdc                      | awFifo/ram_reg                                                         | Implied        | 4 x 57               | RAM32M x 10   | 
+|i_0/u_axi_cdc                      | wFifo/ram_reg                                                          | Implied        | 8 x 37               | RAM32M x 7    | 
+|i_0/u_axi_cdc                      | arFifo/ram_reg                                                         | Implied        | 4 x 57               | RAM32M x 10   | 
+|i_0/u_axi_cdc                      | rFifo/ram_reg                                                          | Implied        | 8 x 39               | RAM32M x 7    | 
+|i_0/u_axi_uart_controller          | uart0/regs/receiver/fifo_rx/rfifo/ram_reg                              | Implied        | 16 x 8               | RAM32M x 2    | 
+|i_0/u_axi_uart_controller          | uart0/regs/transmitter/fifo_tx/tfifo/ram_reg                           | Implied        | 16 x 8               | RAM32M x 2    | 
+|i_0/u_axi_crossbar                 | axi4WriteOnlyArbiter_4/cmdRouteFork_translated_fifo/fifo/logic_ram_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|i_0/u_axi_crossbar                 | axi4WriteOnlyArbiter_5/cmdRouteFork_translated_fifo/fifo/logic_ram_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|i_0/u_axi_crossbar                 | axi4WriteOnlyArbiter_6/cmdRouteFork_translated_fifo/fifo/logic_ram_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|i_0/u_axi_crossbar                 | axi4WriteOnlyArbiter_7/cmdRouteFork_translated_fifo/fifo/logic_ram_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
++-----------------------------------+------------------------------------------------------------------------+----------------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|gMultiplier        | A*B            | 25     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | (PCIN>>17)+A*B | 25     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B            | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | (PCIN>>17)+A*B | 14     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | (PCIN>>17)+A*B | 18     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|axi_dma_controller | (C'+A2*B2)'    | 11     | 7      | 32     | -      | 32     | 1    | 1    | 1    | -    | -     | 0    | 1    | 
++-------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:03 ; elapsed = 00:06:37 . Memory (MB): peak = 2151.953 ; gain = 1374.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:06:24 ; elapsed = 00:07:00 . Memory (MB): peak = 2151.953 ; gain = 1374.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------------------------------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                               | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|soc_top                                                   | icache/tagv_ram_way[0].u/mem_reg_reg                  | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|soc_top                                                   | icache/tagv_ram_way[1].u/mem_reg_reg                  | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|soc_top                                                   | icache/tagv_ram_way[2].u/mem_reg_reg                  | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|soc_top                                                   | icache/tagv_ram_way[3].u/mem_reg_reg                  | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[1].data_ram_bank[0].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[1].data_ram_bank[1].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[1].data_ram_bank[2].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[1].data_ram_bank[3].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[2].data_ram_bank[0].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[2].data_ram_bank[1].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[2].data_ram_bank[2].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[2].data_ram_bank[3].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[3].data_ram_bank[0].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[3].data_ram_bank[1].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[3].data_ram_bank[2].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[3].data_ram_bank[3].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[0].data_ram_bank[0].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[0].data_ram_bank[1].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[0].data_ram_bank[2].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|soc_top                                                   | icache/data_ram_way[0].data_ram_bank[3].u/mem_reg_reg | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[0].data_ram_bank[0].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[0].data_ram_bank[1].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[0].data_ram_bank[2].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[0].data_ram_bank[3].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[1].data_ram_bank[0].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[1].data_ram_bank[1].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[1].data_ram_bank[2].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[1].data_ram_bank[3].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[2].data_ram_bank[0].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[2].data_ram_bank[1].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[2].data_ram_bank[2].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[2].data_ram_bank[3].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[3].data_ram_bank[0].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[3].data_ram_bank[1].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[3].data_ram_bank[2].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache/\data_ram_way[3].data_ram_bank[3].u  | mem_reg_reg                                           | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|u_core_topi_2/dcache                                      | tagv_ram_way[0].u/mem_reg_reg                         | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|u_core_topi_2/dcache                                      | tagv_ram_way[1].u/mem_reg_reg                         | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|u_core_topi_2/dcache                                      | tagv_ram_way[2].u/mem_reg_reg                         | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
+|u_core_topi_2/dcache                                      | tagv_ram_way[3].u/mem_reg_reg                         | 256 x 21(NO_CHANGE)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++----------------------------------------------------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++-----------------------------------+------------------------------------------------------------------------+----------------+----------------------+---------------+
+|Module Name                        | RTL Object                                                             | Inference      | Size (Depth x Width) | Primitives    | 
++-----------------------------------+------------------------------------------------------------------------+----------------+----------------------+---------------+
+|u_core_topi_1/id_stage             | u_regfile/rf_reg                                                       | Implied        | 32 x 32              | RAM32M x 12   | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_ppn0_reg                                                           | Implied        | 32 x 20              | RAM32M x 12   | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_ppn1_reg                                                           | Implied        | 32 x 20              | RAM32M x 12   | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_v0_reg                                                             | Implied        | 32 x 1               | RAM32X1D x 3  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_v1_reg                                                             | Implied        | 32 x 1               | RAM32X1D x 3  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_d0_reg                                                             | Implied        | 32 x 1               | RAM32X1D x 3  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_d1_reg                                                             | Implied        | 32 x 1               | RAM32X1D x 3  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_mat0_reg                                                           | Implied        | 32 x 2               | RAM32X1D x 6  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_mat1_reg                                                           | Implied        | 32 x 2               | RAM32X1D x 6  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_plv0_reg                                                           | Implied        | 32 x 2               | RAM32X1D x 6  | 
+|u_core_topi_1/addr_trans/tlb_entry | tlb_plv1_reg                                                           | Implied        | 32 x 2               | RAM32X1D x 6  | 
+|u_core_topi_2/dcache               | way_d_reg_reg                                                          | Implied        | 256 x 4              | RAM64M x 16   | 
+|u_core_topi_2/btb                  | btb_target_reg                                                         | Implied        | 32 x 30              | RAM32M x 15   | 
+|u_core_topi_2/btb                  | ras_reg                                                                | Implied        | 8 x 30               | RAM32M x 5    | 
+|i_0/u_axi_cdc                      | awFifo/ram_reg                                                         | Implied        | 4 x 57               | RAM32M x 10   | 
+|i_0/u_axi_cdc                      | wFifo/ram_reg                                                          | Implied        | 8 x 37               | RAM32M x 7    | 
+|i_0/u_axi_cdc                      | arFifo/ram_reg                                                         | Implied        | 4 x 57               | RAM32M x 10   | 
+|i_0/u_axi_cdc                      | rFifo/ram_reg                                                          | Implied        | 8 x 39               | RAM32M x 7    | 
+|i_0/u_axi_uart_controller          | uart0/regs/receiver/fifo_rx/rfifo/ram_reg                              | Implied        | 16 x 8               | RAM32M x 2    | 
+|i_0/u_axi_uart_controller          | uart0/regs/transmitter/fifo_tx/tfifo/ram_reg                           | Implied        | 16 x 8               | RAM32M x 2    | 
+|i_0/u_axi_crossbar                 | axi4WriteOnlyArbiter_4/cmdRouteFork_translated_fifo/fifo/logic_ram_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|i_0/u_axi_crossbar                 | axi4WriteOnlyArbiter_5/cmdRouteFork_translated_fifo/fifo/logic_ram_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|i_0/u_axi_crossbar                 | axi4WriteOnlyArbiter_6/cmdRouteFork_translated_fifo/fifo/logic_ram_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|i_0/u_axi_crossbar                 | axi4WriteOnlyArbiter_7/cmdRouteFork_translated_fifo/fifo/logic_ram_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
++-----------------------------------+------------------------------------------------------------------------+----------------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/tagv_ram_way[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/tagv_ram_way[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/tagv_ram_way[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/tagv_ram_way[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/tagv_ram_way[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/tagv_ram_way[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/tagv_ram_way[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/tagv_ram_way[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[1].data_ram_bank[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[1].data_ram_bank[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[1].data_ram_bank[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[1].data_ram_bank[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[2].data_ram_bank[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[2].data_ram_bank[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[2].data_ram_bank[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[2].data_ram_bank[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[3].data_ram_bank[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[3].data_ram_bank[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[3].data_ram_bank[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[3].data_ram_bank[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[0].data_ram_bank[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[0].data_ram_bank[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[0].data_ram_bank[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/icache/data_ram_way[0].data_ram_bank[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[0].data_ram_bank[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[0].data_ram_bank[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[0].data_ram_bank[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[0].data_ram_bank[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[1].data_ram_bank[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[1].data_ram_bank[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[1].data_ram_bank[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[1].data_ram_bank[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[2].data_ram_bank[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[2].data_ram_bank[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[2].data_ram_bank[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[2].data_ram_bank[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[3].data_ram_bank[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[3].data_ram_bank[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[3].data_ram_bank[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/data_ram_way[3].data_ram_bank[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/tagv_ram_way[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/tagv_ram_way[0].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/tagv_ram_way[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/tagv_ram_way[1].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/tagv_ram_way[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/tagv_ram_way[2].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/tagv_ram_way[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_core_top/dcache/tagv_ram_way[3].u/mem_reg_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:07:29 ; elapsed = 00:08:10 . Memory (MB): peak = 2351.742 ; gain = 1574.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:07:48 ; elapsed = 00:08:35 . Memory (MB): peak = 2572.723 ; gain = 1795.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:50 ; elapsed = 00:08:36 . Memory (MB): peak = 2576.703 ; gain = 1799.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:08:29 ; elapsed = 00:09:18 . Memory (MB): peak = 2667.641 ; gain = 1890.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:08:30 ; elapsed = 00:09:19 . Memory (MB): peak = 2667.641 ; gain = 1890.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:08:32 ; elapsed = 00:09:22 . Memory (MB): peak = 2676.098 ; gain = 1898.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:08:32 ; elapsed = 00:09:22 . Memory (MB): peak = 2676.098 ; gain = 1898.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | A*B'         | 24     | 17     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gMultiplier        | PCIN>>17+A*B | 24     | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|axi_dma_controller | (C'+A'*B')'  | 11     | 7      | 32     | -      | 32     | 1    | 1    | 1    | -    | -     | 0    | 1    | 
+|CB_Controller      | A*B          | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | PCIN>>17+A*B | 17     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B          | 0      | 7      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B          | 6      | 7      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | PCIN>>17+A*B | 6      | 0      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B          | 17     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | A*B          | 6      | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CB_Controller      | PCIN>>17+A*B | 6      | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_pll       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |clk_pll  |     1|
+|2     |BUFG     |    12|
+|3     |CARRY4   |  2215|
+|4     |DSP48E1  |    74|
+|7     |LUT1     |   502|
+|8     |LUT2     |  6994|
+|9     |LUT3     |  5591|
+|10    |LUT4     |  4890|
+|11    |LUT5     |  8975|
+|12    |LUT6     | 36911|
+|13    |MUXF7    |  8799|
+|14    |MUXF8    |  4313|
+|15    |RAM16X1D |     4|
+|16    |RAM32M   |    78|
+|17    |RAM32X1D |    43|
+|18    |RAM64M   |     8|
+|19    |RAM64X1D |     8|
+|20    |RAMB18E1 |    40|
+|22    |FDCE     |  2973|
+|23    |FDPE     |    18|
+|24    |FDRE     | 84702|
+|25    |FDSE     |    89|
+|26    |LD       |  4352|
+|27    |LDC      |  1024|
+|28    |IBUF     |    37|
+|29    |IOBUF    |    66|
+|30    |OBUF     |    87|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:08:33 ; elapsed = 00:09:22 . Memory (MB): peak = 2676.098 ; gain = 1898.574
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:16 ; elapsed = 00:08:24 . Memory (MB): peak = 2676.098 ; gain = 1560.051
+Synthesis Optimization Complete : Time (s): cpu = 00:08:33 ; elapsed = 00:09:23 . Memory (MB): peak = 2676.098 ; gain = 1898.574
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2705.531 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 21024 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 6 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 2730.051 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5583 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 66 instances
+  LD => LDCE: 4352 instances
+  LDC => LDCE: 1024 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 4 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 78 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 43 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 8 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
+
+Synth Design complete | Checksum: 150cfbb7
+INFO: [Common 17-83] Releasing license: Synthesis
+301 Infos, 236 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:09:38 ; elapsed = 00:10:43 . Memory (MB): peak = 2730.051 ; gain = 2188.539
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.373 . Memory (MB): peak = 2730.051 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.runs/synth_1/soc_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 2730.051 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file soc_top_utilization_synth.rpt -pb soc_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 12 03:53:53 2026...

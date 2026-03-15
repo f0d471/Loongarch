@@ -1,0 +1,563 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Mar 11 23:16:11 2026
+# Process ID         : 43504
+# Current directory  : E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent34828 E:\github\Loongarch\LLaMA2-on-OpenLA500\fpga\project\Loongson_Soc.xpr
+# Log file           : E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/vivado.log
+# Journal file       : E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project\vivado.jou
+# Running On         : DESKTOP-HDDM8O8
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13650HX
+# CPU Frequency      : 2803 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16849 MB
+# Swap memory        : 32531 MB
+# Total Virtual      : 49380 MB
+# Available Virtual  : 11656 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24i\1.0\board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26c\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.2\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.3\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k26i\1.4\board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.6\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kc705\1.7\board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu1500\1.2\board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kd240_som\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.0\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kr260_som\1.1\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.2\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.3\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kv260_som\1.4\board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\scu35\1.0\board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.0\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.1\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\v80\1.0\board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.4\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc707\1.5\board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vc709\1.8\board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\2.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190\production\3.4\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.0\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.1\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.2\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vck190_newl\production\1.3\board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.0\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.3\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu118\2.4\board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu128\production\1.0\board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu1525\1.3\board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.0\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.1\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek280\production\1.2\board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385\1.1\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385_1:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vek385_2\1.0\board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_mpsoc\1.0\board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.0\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.1\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vhk158\production\1.2\board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\2.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.2\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180\production\3.3\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.0\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vmk180_newl\production\1.1\board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.0\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.1\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk120\production\1.2\board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.0\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.1\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vpk180\production\1.2\board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.4\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.5 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zc706\1.5\board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.3\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu102\3.4\board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu104\1.1\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.4\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.5\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu106\2.6\board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.0\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\emb-plus-vpr-4616\1.1\board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.0\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.1 available at E:/app/XILINX/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\k24c\1.1\board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/app/XILINX/2025.2/Vivado/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 1700.383 ; gain = 252.445
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Wed Mar 11 23:17:14 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/app/XILINX/2025.2/Vivado/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/app/XILINX/2025.2/Vivado/data/xsim/xsim.ini' copied to run dir:'E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.gen/sources_1/ip/clk_pll/clk_pll_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_pll_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.gen/sources_1/ip/clk_pll/clk_pll.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_pll
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AxiCrossbar_2x4
+INFO: [VRFC 10-311] analyzing module Axi4WriteOnlyArbiter
+INFO: [VRFC 10-311] analyzing module Axi4ReadOnlyArbiter
+INFO: [VRFC 10-311] analyzing module Axi4WriteOnlyDecoder
+INFO: [VRFC 10-311] analyzing module Axi4ReadOnlyDecoder
+INFO: [VRFC 10-311] analyzing module StreamFifoLowLatency
+INFO: [VRFC 10-311] analyzing module StreamArbiter
+INFO: [VRFC 10-311] analyzing module Axi4WriteOnlyErrorSlave
+INFO: [VRFC 10-311] analyzing module Axi4ReadOnlyErrorSlave
+INFO: [VRFC 10-311] analyzing module StreamFifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/Axi_CDC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Axi_CDC
+INFO: [VRFC 10-311] analyzing module StreamFifoCC_4
+INFO: [VRFC 10-311] analyzing module StreamFifoCC_3
+INFO: [VRFC 10-311] analyzing module StreamFifoCC_2
+INFO: [VRFC 10-311] analyzing module StreamFifoCC_1
+INFO: [VRFC 10-311] analyzing module StreamFifoCC
+INFO: [VRFC 10-311] analyzing module BufferCC_1
+INFO: [VRFC 10-311] analyzing module BufferCC
+INFO: [VRFC 10-311] analyzing module BufferCC_6
+INFO: [VRFC 10-311] analyzing module BufferCC_5
+INFO: [VRFC 10-311] analyzing module BufferCC_4
+INFO: [VRFC 10-311] analyzing module BufferCC_8
+INFO: [VRFC 10-311] analyzing module BufferCC_7
+INFO: [VRFC 10-311] analyzing module BufferCC_11
+INFO: [VRFC 10-311] analyzing module BufferCC_10
+INFO: [VRFC 10-311] analyzing module BufferCC_9
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CB_top
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'debug_data' is not allowed [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:192]
+WARNING: [VRFC 10-2938] 'cmd_block_size' is already implicitly declared on line 333 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:416]
+WARNING: [VRFC 10-2938] 'cmd_stride' is already implicitly declared on line 334 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:417]
+WARNING: [VRFC 10-2938] 'cmd_padding_en' is already implicitly declared on line 335 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:418]
+WARNING: [VRFC 10-2938] 'cmd_block_count' is already implicitly declared on line 337 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:419]
+WARNING: [VRFC 10-2938] 'cmd_padding_words' is already implicitly declared on line 336 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:420]
+WARNING: [VRFC 10-3380] identifier 'ctrl_done' is used before its declaration [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:137]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/PE_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_core
+WARNING: [VRFC 10-3380] identifier 'mul_outcome_reg' is used before its declaration [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/PE_core.v:47]
+INFO: [VRFC 10-311] analyzing module fp_mac_pipelined_acc
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/addr_trans.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr_trans
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/apb_mux2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apb_mux2
+INFO: [VRFC 10-311] analyzing module arb_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/axi2apb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi2apb_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/axi2sram_sp_ext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi2sram_sp_ext
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/axi_bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/axi_dma_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_dma_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/axi_uart_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_uart_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/ram_wrap/axi_wrap_ram_sp_ext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_wrap_ram_sp_ext
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/btb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module btb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/ram_wrap/cache_sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_bank_sram
+INFO: [VRFC 10-311] analyzing module tagv_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CB_Controller
+WARNING: [VRFC 10-3380] identifier 'state' is used before its declaration [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/cb_controll.v:193]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/confreg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module confreg
+INFO: [VRFC 10-311] analyzing module lfsr32
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/csr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module csr
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/dcache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dcache
+INFO: [VRFC 10-311] analyzing module lfsr
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/digitaltube_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module digitaltube_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/exe_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module exe_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/confreg/ext_int_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ext_int_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fpadd_seq
+INFO: [VRFC 10-311] analyzing module generalAdder
+INFO: [VRFC 10-311] analyzing module addition_normaliser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fpmul_seq_pipeline
+INFO: [VRFC 10-311] analyzing module gMultiplier
+INFO: [VRFC 10-311] analyzing module multiplication_normaliser
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/icache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module icache
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/id_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/if_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/iopad_fpga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PB8W
+INFO: [VRFC 10-311] analyzing module PO8W
+INFO: [VRFC 10-311] analyzing module PIW
+INFO: [VRFC 10-311] analyzing module PIUW
+INFO: [VRFC 10-311] analyzing module PX3W
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/mac_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mem_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module YDecoder
+INFO: [VRFC 10-311] analyzing module BoothBase
+INFO: [VRFC 10-311] analyzing module BoothInterBase
+INFO: [VRFC 10-311] analyzing module addr
+INFO: [VRFC 10-311] analyzing module WallaceTreeBase
+INFO: [VRFC 10-311] analyzing module mul
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/mycpu_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module core_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/perf_counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module perf_counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/raminfr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module raminfr
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/rst_sync/rst_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rst_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/sim/sram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram_sp
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tlb_entry.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tlb_entry
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/tools.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_2_4
+INFO: [VRFC 10-311] analyzing module encoder_4_2
+INFO: [VRFC 10-311] analyzing module decoder_4_16
+INFO: [VRFC 10-311] analyzing module encoder_16_4
+INFO: [VRFC 10-311] analyzing module decoder_5_32
+INFO: [VRFC 10-311] analyzing module encoder_32_5
+INFO: [VRFC 10-311] analyzing module decoder_6_64
+INFO: [VRFC 10-311] analyzing module one_valid_n
+INFO: [VRFC 10-311] analyzing module one_valid_16
+INFO: [VRFC 10-311] analyzing module one_valid_32
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_receiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_receiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_rfifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rfifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_sync_flops.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_sync_flops
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_tfifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tfifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UART_TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/APB_UART/URT/uart_transmitter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_transmitter
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/open-la500/wb_stage.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wb_stage
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/write_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module write_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/soc_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module soc_top
+WARNING: [VRFC 10-2938] 'debug_CB_state' is already implicitly declared on line 225 [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/soc_top.sv:562]
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1717.512 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '10' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/app/XILINX/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 7 differs from formal bit length 6 for port 'cmd_block_count' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/CB_top.v:458]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/soc_top.sv" Line 37. Module soc_top(SIMULATION=1'b1) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-3980] File "E:/github/Loongarch/LLaMA2-on-OpenLA500/sim/sram.v" Line 48 : The SystemVerilog feature ": Sensitivity on Associative Array" is not supported yet for simulation.
+WARNING: [XSIM 43-3980] File "E:/github/Loongarch/LLaMA2-on-OpenLA500/sim/sram.v" Line 48 : The SystemVerilog feature ": Sensitivity on Associative Array" is not supported yet for simulation.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PX3W
+Compiling module xil_defaultlib.PIUW
+Compiling module xil_defaultlib.PIW
+Compiling module xil_defaultlib.PO8W
+Compiling module xil_defaultlib.PB8W
+Compiling module xil_defaultlib.rst_sync
+Compiling module xil_defaultlib.if_stage
+Compiling module xil_defaultlib.decoder_6_64
+Compiling module xil_defaultlib.decoder_4_16
+Compiling module xil_defaultlib.decoder_2_4
+Compiling module xil_defaultlib.decoder_5_32
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_stage
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.exe_stage
+Compiling module xil_defaultlib.div
+Compiling module xil_defaultlib.YDecoder
+Compiling module xil_defaultlib.BoothBase
+Compiling module xil_defaultlib.BoothInterBase_default
+Compiling module xil_defaultlib.addr
+Compiling module xil_defaultlib.WallaceTreeBase
+Compiling module xil_defaultlib.mul_default
+Compiling module xil_defaultlib.mem_stage
+Compiling module xil_defaultlib.wb_stage
+Compiling module xil_defaultlib.csr
+Compiling module xil_defaultlib.axi_bridge
+Compiling module xil_defaultlib.encoder_4_2
+Compiling module xil_defaultlib.encoder_16_4
+Compiling module xil_defaultlib.encoder_32_5
+Compiling module xil_defaultlib.tlb_entry_default
+Compiling module xil_defaultlib.addr_trans
+Compiling module xil_defaultlib.one_valid_n(n=4)
+Compiling module xil_defaultlib.data_bank_sram_default
+Compiling module xil_defaultlib.tagv_sram_default
+Compiling module xil_defaultlib.lfsr
+Compiling module xil_defaultlib.icache_default
+Compiling module xil_defaultlib.dcache_default
+Compiling module xil_defaultlib.one_valid_32
+Compiling module xil_defaultlib.one_valid_16
+Compiling module xil_defaultlib.btb_default
+Compiling module xil_defaultlib.perf_counter
+Compiling module xil_defaultlib.core_top
+Compiling module xil_defaultlib.BufferCC_9
+Compiling module xil_defaultlib.BufferCC_10
+Compiling module xil_defaultlib.BufferCC_11
+Compiling module xil_defaultlib.StreamFifoCC
+Compiling module xil_defaultlib.BufferCC_7
+Compiling module xil_defaultlib.BufferCC_8
+Compiling module xil_defaultlib.StreamFifoCC_1
+Compiling module xil_defaultlib.BufferCC_4
+Compiling module xil_defaultlib.BufferCC_5
+Compiling module xil_defaultlib.BufferCC_6
+Compiling module xil_defaultlib.StreamFifoCC_2
+Compiling module xil_defaultlib.StreamFifoCC_3
+Compiling module xil_defaultlib.BufferCC
+Compiling module xil_defaultlib.BufferCC_1
+Compiling module xil_defaultlib.StreamFifoCC_4
+Compiling module xil_defaultlib.Axi_CDC
+Compiling module xil_defaultlib.CB_Controller
+Compiling module xil_defaultlib.sram(DATA_WIDTH=32)
+Compiling module xil_defaultlib.sram(DATA_WIDTH=32,INIT_FILE="D:...
+Compiling module xil_defaultlib.sram(DATA_WIDTH=1024,ADDR_WIDTH=...
+Compiling module xil_defaultlib.multiplication_normaliser
+Compiling module xil_defaultlib.gMultiplier
+Compiling module xil_defaultlib.fpmul_seq_pipeline
+Compiling module xil_defaultlib.addition_normaliser
+Compiling module xil_defaultlib.generalAdder
+Compiling module xil_defaultlib.fpadd_seq
+Compiling module xil_defaultlib.fp_mac_pipelined_acc
+Compiling module xil_defaultlib.PE_core(MAC_LATENCY=4)
+Compiling module xil_defaultlib.write_out
+Compiling module xil_defaultlib.mac_top_default
+Compiling module xil_defaultlib.axi_dma_controller_default
+Compiling module xil_defaultlib.CB_top
+Compiling module xil_defaultlib.axi2sram_sp_ext_default
+Compiling module xil_defaultlib.axi_wrap_ram_sp_ext
+Compiling module xil_defaultlib.fifo(D_WIDTH=5)
+Compiling module xil_defaultlib.axi2apb_bridge
+Compiling module xil_defaultlib.arb_2_1
+Compiling module xil_defaultlib.apb_mux2
+Compiling module xil_defaultlib.raminfr
+Compiling module xil_defaultlib.uart_tfifo
+Compiling module xil_defaultlib.uart_transmitter
+Compiling module xil_defaultlib.uart_sync_flops(width=1,init_val...
+Compiling module xil_defaultlib.uart_rfifo(fifo_width=11)
+Compiling module xil_defaultlib.uart_receiver
+Compiling module xil_defaultlib.uart_regs
+Compiling module xil_defaultlib.UART_TOP
+Compiling module xil_defaultlib.axi_uart_controller
+Compiling module xil_defaultlib.digitaltube_controller
+Compiling module xil_defaultlib.lfsr32
+Compiling module xil_defaultlib.ext_int_ctrl
+Compiling module xil_defaultlib.confreg(SIMULATION=1'b1)
+Compiling module xil_defaultlib.Axi4ReadOnlyErrorSlave
+Compiling module xil_defaultlib.Axi4ReadOnlyDecoder
+Compiling module xil_defaultlib.Axi4WriteOnlyErrorSlave
+Compiling module xil_defaultlib.Axi4WriteOnlyDecoder
+Compiling module xil_defaultlib.StreamArbiter
+Compiling module xil_defaultlib.Axi4ReadOnlyArbiter
+Compiling module xil_defaultlib.StreamFifo
+Compiling module xil_defaultlib.StreamFifoLowLatency
+Compiling module xil_defaultlib.Axi4WriteOnlyArbiter
+Compiling module xil_defaultlib.AxiCrossbar_2x4
+Compiling module xil_defaultlib.soc_top(SIMULATION=1'b1)
+Compiling module xil_defaultlib.sram_sp(AW=21,Init_File="../../....
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:26 . Memory (MB): peak = 1717.512 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '26' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: File D://IC//Matrix_coaccelerator//vsrc//vector.mem referenced on E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v at line 2058 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1742.426 ; gain = 24.914
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:45 . Memory (MB): peak = 1742.426 ; gain = 42.043
+run all
+0
+
+radon seed is b23b92bc1
+
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1742.426 ; gain = 0.000
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.srcs/utils_1/imports/synth_1/soc_top.dcp with file E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.runs/synth_1/soc_top.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.runs/synth_1
+
+launch_runs synth_1 -jobs 10
+WARNING: [HDL 9-3756] overwriting previous definition of module 'Axi4WriteOnlyDecoder' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:2625]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'Axi4ReadOnlyDecoder' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3023]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'Axi4WriteOnlyErrorSlave' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3508]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'Axi4ReadOnlyErrorSlave' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v:3576]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'addition_normaliser' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v:198]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'gMultiplier' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:103]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'multiplication_normaliser' [E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v:177]
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'Axi4WriteOnlyDecoder()' found in library 'xil_defaultlib'
+Duplicate found at line 926 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_1x4.v
+	(Active) Duplicate found at line 2625 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'Axi4ReadOnlyDecoder()' found in library 'xil_defaultlib'
+Duplicate found at line 1312 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_1x4.v
+	(Active) Duplicate found at line 3023 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'Axi4WriteOnlyErrorSlave()' found in library 'xil_defaultlib'
+Duplicate found at line 1624 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_1x4.v
+	(Active) Duplicate found at line 3508 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'Axi4ReadOnlyErrorSlave()' found in library 'xil_defaultlib'
+Duplicate found at line 1692 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_1x4.v
+	(Active) Duplicate found at line 3576 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'addition_normaliser()' found in library 'xil_defaultlib'
+Duplicate found at line 137 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fp_add.v
+	(Active) Duplicate found at line 198 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpadd_seq.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'gMultiplier()' found in library 'xil_defaultlib'
+Duplicate found at line 94 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq.v
+	(Active) Duplicate found at line 103 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'multiplication_normaliser()' found in library 'xil_defaultlib'
+Duplicate found at line 165 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq.v
+	(Active) Duplicate found at line 177 of file E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Co_processor/fpmul_seq_pipeline.v
+[Wed Mar 11 23:23:57 2026] Launched synth_1...
+Run output will be captured here: E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 10
+[Wed Mar 11 23:37:42 2026] Launched impl_1...
+Run output will be captured here: E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a200tfbg676-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.816 . Memory (MB): peak = 2160.512 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 15649 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.188 . Memory (MB): peak = 2332.938 ; gain = 18.465
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 3179.324 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 3179.324 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3179.324 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3239.668 ; gain = 60.344
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3239.668 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3324.605 ; gain = 84.938
+Read Physdb Files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3324.605 ; gain = 145.281
+Restored from archive | CPU: 5.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3324.605 ; gain = 145.281
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 3482.477 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 207 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 66 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 4 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 78 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 43 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 8 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
+
+open_run: Time (s): cpu = 00:01:13 ; elapsed = 00:00:40 . Memory (MB): peak = 4209.484 ; gain = 2429.148
+open_report: Time (s): cpu = 00:00:30 ; elapsed = 00:00:13 . Memory (MB): peak = 4559.715 ; gain = 280.895
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+[Thu Mar 12 00:55:10 2026] Launched impl_1...
+Run output will be captured here: E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 12 01:41:44 2026...
