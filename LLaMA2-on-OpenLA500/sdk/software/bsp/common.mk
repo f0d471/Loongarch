@@ -38,6 +38,8 @@ C_SRCS   += $(COMMON_DIR)/drivers/confreg_time.c
 C_SRCS   += $(COMMON_DIR)/drivers/core_time.c
 C_SRCS   += $(COMMON_DIR)/drivers/common_func.c
 C_SRCS   += $(COMMON_DIR)/drivers/gpio.c
+C_SRCS   += $(COMMON_DIR)/drivers/spi.c
+C_SRCS   += $(COMMON_DIR)/drivers/wdt.c
 
 INCLUDES += -I./ \
 			-I$(COMMON_DIR)/include \

@@ -33,11 +33,14 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // axi_apb_controller: AXI-to-APB bridge controller for APB peripherals
 // Renamed from axi_uart_controller to reflect multi-device APB bus.
-// Contains: axi2apb_bridge + apb_mux2 + UART0 (apb dev0) + GPIO (apb dev1)
+// Contains: axi2apb_bridge + apb_mux2 + UART0 (apb dev0) + GPIO/SPI/WDT (apb dev1 sub-decode)
 //
 // APB Device Address Map (within 0x1F00_0000 region):
 //   dev0 (UART): offset 0x0000 ~ 0x3FFF  (addr[19:14] == 6'h00)
-//   dev1 (GPIO): offset 0x4000+           (addr[19:14] != 6'h00)
+//   dev1 (sub decode by addr[13:12]):
+//     2'b00: GPIO base 0x1F00_4000
+//     2'b01: SPI  base 0x1F00_5000
+//     2'b10: WDT  base 0x1F00_6000
 //   GPIO registers at absolute address 0x1F00_4000:
 //     GPDAT: 0x1F004000
 //     GPDIR: 0x1F004004
@@ -118,7 +121,14 @@ uart0_int,
 
 gpio_in,
 gpio_out,
-gpio_int
+gpio_int,
+
+spi_miso_i,
+spi_mosi_o,
+spi_sclk_o,
+
+wdt_int,
+wdt_res
 );
 
 parameter ADDR_APB = 20,
@@ -196,6 +206,13 @@ input  [15:0] gpio_in;
 output [15:0] gpio_out;
 output        gpio_int;
 
+input         spi_miso_i;
+output        spi_mosi_o;
+output        spi_sclk_o;
+
+output        wdt_int;
+output        wdt_res;
+
 assign  dma_req_o      = 1'b0;
 assign  nand_dma_ack_i = dma_ack_i; 
 
@@ -242,6 +259,22 @@ wire                apb_gpio0_psel;
 wire  [ADDR_APB -1:0] apb_gpio0_addr; 
 wire  [31:0]        apb_gpio0_datai; 
 wire  [31:0]        apb_gpio0_datao; 
+
+wire                apb_gpio_psel;
+wire                apb_gpio_enab;
+wire [31:0]         apb_gpio_datao;
+
+wire                apb_spi_psel;
+wire                apb_spi_enab;
+wire [31:0]         apb_spi_datao;
+
+wire                apb_wdt_psel;
+wire                apb_wdt_enab;
+wire [31:0]         apb_wdt_datao;
+
+wire                apb_gpio_sel;
+wire                apb_spi_sel;
+wire                apb_wdt_sel;
 
 axi2apb_bridge AA_axi2apb_bridge_cpu 
 (
@@ -378,28 +411,82 @@ UART_TOP uart0
 );
 
 //----------------------------------------------------------------------
-// APB Device 1: GPIO  (addr[19:14] != 6'h00, offset 0x4000+)
-// Absolute address: 0x1F004000 ~ 0x1F00400F
+// APB Device 1 sub decode (GPIO/SPI/WDT)
 //----------------------------------------------------------------------
+assign apb_gpio_sel = (apb_gpio0_addr[13:12] == 2'b00);
+assign apb_spi_sel  = (apb_gpio0_addr[13:12] == 2'b01);
+assign apb_wdt_sel  = (apb_gpio0_addr[13:12] == 2'b10);
+
+assign apb_gpio_psel = apb_gpio0_psel & apb_gpio_sel;
+assign apb_spi_psel  = apb_gpio0_psel & apb_spi_sel;
+assign apb_wdt_psel  = apb_gpio0_psel & apb_wdt_sel;
+
+assign apb_gpio_enab = apb_gpio0_enab & apb_gpio_sel;
+assign apb_spi_enab  = apb_gpio0_enab & apb_spi_sel;
+assign apb_wdt_enab  = apb_gpio0_enab & apb_wdt_sel;
+
 assign apb_gpio0_ack = apb_gpio0_enab;
+assign apb_gpio0_datao = apb_gpio_sel ? apb_gpio_datao :
+                         apb_spi_sel  ? apb_spi_datao  :
+                         apb_wdt_sel  ? apb_wdt_datao  :
+                         32'h0;
+
+// GPIO: 0x1F00_4000 ~ 0x1F00_4FFF
 apb_gpio u_apb_gpio
 (
 .PCLK              (clk                    ),
 .PCLKG             (clk                    ),
 .PRESETn           (rst_n                  ),
-.PSEL              (apb_gpio0_psel         ),
+.PSEL              (apb_gpio_psel          ),
 .PADDR             (apb_gpio0_addr[11:2]   ),
-.PENABLE           (apb_gpio0_enab         ),
+.PENABLE           (apb_gpio_enab          ),
 .PWRITE            (apb_gpio0_rw           ),
 .PWDATA            (apb_gpio0_datai        ),
 .ECOREVNUM         (4'b0                   ),
-.PRDATA            (apb_gpio0_datao        ),
+.PRDATA            (apb_gpio_datao         ),
 .PREADY            (                       ),
 .PSLVERR           (                       ),
 .iGPIN             (gpio_in                ),
 .oGPOUT            (gpio_out               ),
 .oINT              (gpio_int               ),
 .oERR              (                       )
+);
+
+// SPI: 0x1F00_5000 ~ 0x1F00_5FFF
+spi_top u_apb_spi
+(
+.PCLK              (clk                    ),
+.PCLKG             (clk                    ),
+.PRESETn           (rst_n                  ),
+.PSEL              (apb_spi_psel           ),
+.PADDR             (apb_gpio0_addr[11:2]   ),
+.PENABLE           (apb_spi_enab           ),
+.PWRITE            (apb_gpio0_rw           ),
+.PWDATA            (apb_gpio0_datai        ),
+.ECOREVNUM         (4'b0                   ),
+.PRDATA            (apb_spi_datao          ),
+.PREADY            (                       ),
+.PSLVERR           (                       ),
+.MISO              (spi_miso_i             ),
+.MOSI              (spi_mosi_o             ),
+.SCLK              (spi_sclk_o             )
+);
+
+// WDT: 0x1F00_6000 ~ 0x1F00_6FFF
+apb_wdt_top u_apb_wdt
+(
+.PCLK              (clk                    ),
+.PRESETn           (rst_n                  ),
+.PSEL              (apb_wdt_psel           ),
+.PADDR             (apb_gpio0_addr[11:2]   ),
+.PENABLE           (apb_wdt_enab           ),
+.PWRITE            (apb_gpio0_rw           ),
+.PWDATA            (apb_gpio0_datai        ),
+.PRDATA            (apb_wdt_datao          ),
+.PREADY            (                       ),
+.PSLVERR           (                       ),
+.WDT_INT           (wdt_int                ),
+.WDT_RES           (wdt_res                )
 );
 
 endmodule

@@ -1,6 +1,3 @@
 Time resolution is 1 ps
 WARNING: File D://IC//Matrix_coaccelerator//vsrc//vector.mem referenced on E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v at line 2058 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
-0
-
-radon seed is 725798ea1
-
+\n=== GPIO polling test start ===\nGPIO base = 0xbf004000\nGPDIR = 0xff00 (1=input, 0=output)\ninitial gpio_in = 0x0000\nwrite GPDAT=0x0001, readback GPDAT=0x0001\nwrite GPDAT=0x0002, readback GPDAT=0x0002\nwrite GPDAT=0x0004, readback GPDAT=0x0004\nwrite GPDAT=0x0008, readback GPDAT=0x0008\nwrite GPDAT=0x0010, readback GPDAT=0x0010\nwrite GPDAT=0x0020, readback GPDAT=0x0020\nwrite GPDAT=0x0040, readback GPDAT=0x0040\nwrite GPDAT=0x0080, readback GPDAT=0x0080\nwrite GPDAT=0x0001, readback GPDAT=0x0001\nwrite GPDAT=0x0002, readback GPDAT=0x0002\nwrite GPDAT=0x0004, readback GPDAT=0x0004\nwrite GPDAT=0x0008, readback GPDAT=0x0008\nwrite GPDAT=0x0010, readback GPDAT=0x0010\nwrite GPDAT=0x0020, readback GPDAT=0x0020\nINFO: xsimkernel Simulation Memory Usage: 44384 KB (Peak: 44384 KB), Simulation CPU Usage: 23093 ms

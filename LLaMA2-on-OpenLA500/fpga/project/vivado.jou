@@ -23,3 +23,28 @@
 #-----------------------------------------------------------
 start_gui
 oopen_project E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/project/Loongson_Soc.xpruupdate_compile_order -fileset sources_1
+launch_simulation
+source tb_top.tcl
+run all
+close_sim
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 2}
+add_wave {{/tb_top/u_soc_top/debug0_wb_pc}} {{/tb_top/u_soc_top/debug0_wb_rf_wen}} {{/tb_top/u_soc_top/debug0_wb_rf_wnum}} {{/tb_top/u_soc_top/debug0_wb_rf_wdata}} {{/tb_top/u_soc_top/debug0_wb_inst}} 
+run all
+close_sim
+add_files -fileset constrs_1 -norecurse E:/github/Loongarch/LLaMA2-on-OpenLA500/fpga/constraints/soc.xdc
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 3}
+add_wave {{/tb_top/u_soc_top/debug0_wb_pc}} {{/tb_top/u_soc_top/debug0_wb_inst}} 
+run all
+close_sim
+launch_simulation
+source tb_top.tcl
+run all
+close_sim
+launch_simulation
+source tb_top.tcl
+run all
+close_sim

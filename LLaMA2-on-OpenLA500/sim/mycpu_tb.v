@@ -48,6 +48,11 @@ reg   [31:0]  dip_sw;
 
 wire         UART_RX;
 wire         UART_TX;
+reg          SPI_MISO;
+wire         SPI_MOSI;
+wire         SPI_SCLK;
+wire         WDT_INT;
+wire         WDT_RES;
 // wire  [2:0]  video_red;
 // wire  [2:0]  video_green;
 // wire  [1:0]  video_blue;
@@ -78,6 +83,7 @@ initial
 begin
     clk = 1'b0;
     reset = 1'b1;
+    SPI_MISO = 1'b0;
     dip_sw = 32'h0;
     gpio_in = 16'h0;
     #2000;
@@ -148,6 +154,11 @@ soc_top #(.SIMULATION(1'b1))  u_soc_top (
 
     .UART_RX                 ( UART_RX       ),
     .UART_TX                 ( UART_TX       ),
+    .SPI_MISO                ( SPI_MISO      ),
+    .SPI_MOSI                ( SPI_MOSI      ),
+    .SPI_SCLK                ( SPI_SCLK      ),
+    .WDT_INT                 ( WDT_INT       ),
+    .WDT_RES                 ( WDT_RES       ),
 
     .gpio_in                 ( gpio_in       ),
     .gpio_out                ( gpio_out      )

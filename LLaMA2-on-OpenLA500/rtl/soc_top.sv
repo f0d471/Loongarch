@@ -87,7 +87,16 @@ module soc_top #(parameter SIMULATION=1'b0)
 
     //------gpio (Flash连接器引脚)-------
     input  [15:0]   gpio_in,            //GPIO输入 (flash_d[15:0])
-    output [15:0]   gpio_out            //GPIO输出 (flash_a[15:0])
+    output [15:0]   gpio_out,           //GPIO输出 (flash_a[15:0])
+
+    //------spi-------
+    input           SPI_MISO,
+    output          SPI_MOSI,
+    output          SPI_SCLK,
+
+    //------wdt-------
+    output          WDT_INT,
+    output          WDT_RES
 );
 
 
@@ -115,9 +124,24 @@ PX3W PAD_CLK_IN (.XIN(clk), .XOUT(clk_o), .XC(clk_i));
 `IOPAD_GEN_SIMPLE(UART_TX)
 `IPAD_GEN_VEC_SIMPLE(gpio_in)
 `OPAD_GEN_VEC_SIMPLE(gpio_out)
+`IPAD_GEN_SIMPLE(SPI_MISO)
+`OPAD_GEN_SIMPLE(SPI_MOSI)
+`OPAD_GEN_SIMPLE(SPI_SCLK)
+`OPAD_GEN_SIMPLE(WDT_INT)
+`OPAD_GEN_SIMPLE(WDT_RES)
 
 wire [15:0] gpio_out_full;
 assign gpio_out_o = gpio_out_full;
+
+wire spi_mosi;
+wire spi_sclk;
+wire wdt_int;
+wire wdt_res;
+
+assign SPI_MOSI_o = spi_mosi;
+assign SPI_SCLK_o = spi_sclk;
+assign WDT_INT_o  = wdt_int;
+assign WDT_RES_o  = wdt_res;
 
 wire cpu_clk;
 wire cpu_resetn;
@@ -955,7 +979,16 @@ axi_apb_controller u_axi_apb_controller
     // GPIO (16-bit)
     .gpio_in            (gpio_in_i          ),
     .gpio_out           (gpio_out_full      ),
-    .gpio_int           (                   )
+    .gpio_int           (                   ),
+
+    // SPI
+    .spi_miso_i         (SPI_MISO_i         ),
+    .spi_mosi_o         (spi_mosi           ),
+    .spi_sclk_o         (spi_sclk           ),
+
+    // WDT
+    .wdt_int            (wdt_int            ),
+    .wdt_res            (wdt_res            )
 );
 
 
