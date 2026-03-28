@@ -1,6 +1,0 @@
-Time resolution is 1 ps
-WARNING: File D://IC//Matrix_coaccelerator//vsrc//vector.mem referenced on E:/github/Loongarch/LLaMA2-on-OpenLA500/rtl/ip/Bus_interconnects/AxiCrossbar_2x4.v at line 2058 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
-0
-
-radon seed is b23b92bc1
-
