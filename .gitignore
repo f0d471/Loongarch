@@ -1,1 +1,48 @@
-LLaMA2-on-OpenLA500/sdk/toolchains/
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# VS Code workspace cache
+.vscode/
+
+# ---- Logs / Temp ----
+*.log
+*.tmp
+*.bak
+
+# ---- Xilinx Vivado / FPGA generated files ----
+.Xil/
+.cache/
+.hw/
+.ip_user_files/
+.gen/
+.runs/
+.sim/
+
+*.jou
+*.str
+*.pb
+
+# Auto-generated project folders in this repository
+**/fpga/project/
+**/fpga/fpga/
+
+# ---- Simulation outputs ----
+*.vcd
+*.wdb
+*.wcfg
+*.fsdb
+*.out
+
+# ---- Software build/toolchain artifacts ----
+**/sdk/toolchains/
+**/sdk/bin/
+**/sdk/software/**/build/
+
+*.elf
+*.o
+*.a
+*.d
